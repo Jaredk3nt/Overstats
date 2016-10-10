@@ -1,5 +1,5 @@
-var OverwatchStats = angular.module('OverwatchStats', []);
-
+// ENVIRONMENT SETUP
+// MAP object, works as ENUM for map types and names
 var MAP = {
 	EICHENWALD 	: {value: 0, name: "Eichenwald", code: "Hybrid"},
   	KINGSROW   	: {value: 1, name: "King's Row", code: "Hybrid"},
@@ -19,15 +19,18 @@ var MAP = {
 	HANAMURA	: {value: 12, name: "Hanamura", code: "Assault"}
 };
 
+// OUTCOME object, works as ENUM for outcome types
 var OUTCOME = {
     WIN   : {value: 1, name: "Victory"},
     LOSS  : {value: 0, name: "Defeat"},
     TIE   : {value: 2, name: "Draw"}
 };
 
+// Initialize the enum lists for the selectors
 let mapNames = Object.keys(MAP);
 let outcomeTypes = Object.keys(OUTCOME);
 
+// Match object used to store individual match data
 function match(m, sr, o, d) {
     this.map = m;
     this.skillrating = sr;
@@ -35,12 +38,17 @@ function match(m, sr, o, d) {
 	this.date = d;
 }
 
+// Angular app init
+var OverwatchStats = angular.module('OverwatchStats', []);
+
+
+// TEST CODE
 var m1 = new match(MAP.EICHENWALD, 2500, OUTCOME.WIN, "10/07/16");
 var m2 = new match(MAP.ANUBIS, 2434, OUTCOME.LOSS, "10/07/16");
 var matchesList = [];
 matchesList.push(m2);
 
-
+// ANGULAR LIST CONTROLLER
 OverwatchStats.controller('matchListController', 
                           function matchListController($scope) {
 	$scope.matches = matchesList;

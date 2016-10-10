@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="OverwatchStats">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="title"><h1>OVERSTAT</h1></div>
+  
+  <div id="list_wrapper" ng-controller="matchListController">
+	<div id="new_match_wrapper">
+      <select ng-model="newMap" ng-options="x for x in maps"></select>
+      <select ng-model="newOutcome" ng-options="x for x in outcomes"></select>
+      <input type="number" ng-model="newSR" placeholder="Finishing SR">
+	  <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
+	</div>
+    <ul>
+      <li ng-repeat="match in matches">
+        <div class="match_img"></div>
+        <div class="match_name"><h3>{{match}}</h3></div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

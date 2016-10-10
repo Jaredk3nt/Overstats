@@ -4,6 +4,8 @@ body {
 
 #title {
   	text-align: center;
+    color: #fff;
+  	font-family: sans-serif;
 }
 
 ul {
@@ -12,7 +14,7 @@ ul {
 
 li {
 	width: 80%;
-	height: 50px;
+	height: 60px;
 	background: #fff;
 	margin: 5px auto;
 }
@@ -23,6 +25,28 @@ li {
 
 #new_match_wrapper {
   margin: 0 auto;
-  text-align: center;c
+  text-align: center;
 }
 
+.match_img {
+  width: 50px;
+  height: 50px;
+  background: #666;
+  display: inline-block;
+  float: left;
+  margin: 5px;
+}
+
+.match_name {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+
+.match_sr {
+  float: right;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-family: sans-serif;
+}

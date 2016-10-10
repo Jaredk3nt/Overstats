@@ -12,15 +12,16 @@
   
   <div id="list_wrapper" ng-controller="matchListController">
 	<div id="new_match_wrapper">
-      <select ng-model="newMap" ng-options="x for x in maps"></select>
-      <select ng-model="newOutcome" ng-options="x for x in outcomes"></select>
+      <select ng-model="newMap" ng-options="x.name for x in maps"></select>
+      <select ng-model="newOutcome" ng-options="x.name for x in outcomes"></select>
       <input type="number" ng-model="newSR" placeholder="Finishing SR">
 	  <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
 	</div>
     <ul>
       <li ng-repeat="match in matches">
         <div class="match_img"></div>
-        <div class="match_name"><h3>{{match}}</h3></div>
+        <div class="match_name"><h3>{{match.map.name}}</h3></div>
+        <div class="match_sr">SR: {{match.skillrating}}</div>
       </li>
     </ul>
   </div>

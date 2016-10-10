@@ -15,10 +15,11 @@
       <select ng-model="newMap" ng-options="x.name for x in maps"></select>
       <select ng-model="newOutcome" ng-options="x.name for x in outcomes"></select>
       <input type="number" ng-model="newSR" placeholder="Finishing SR">
-	  <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
+      <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
 	</div>
     <ul>
-      <li ng-repeat="match in matches">
+      <li ng-repeat="match in matches" 
+          ng-class="{greenStyle: match.outcome.value == 1, yellowStyle: match.outcome.value == 2, redStyle: match.outcome.value == 0}">
         <div class="match_img"></div>
         <div class="match_name"><h3>{{match.map.name}}</h3></div>
         <div class="match_sr">SR: {{match.skillrating}}</div>

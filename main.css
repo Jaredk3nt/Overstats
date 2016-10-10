@@ -50,3 +50,16 @@ li {
   margin-right: 20px;
   font-family: sans-serif;
 }
+
+
+.greenStyle {
+  background: #8ee2a5;
+}
+
+.yellowStyle {
+  background: #fffa9e;
+}
+
+.redStyle {
+  background: #e54c44;
+}

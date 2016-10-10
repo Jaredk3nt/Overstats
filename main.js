@@ -41,8 +41,8 @@ var MAP = [
 
 // OUTCOME object, works as ENUM for outcome types
 var OUTCOME = [
-    {value: 1, name: "Victory"},
     {value: 0, name: "Defeat"},
+    {value: 1, name: "Victory"},
     {value: 2, name: "Draw"}
 ];
 
@@ -58,8 +58,8 @@ function match(m, sr, o, d) {
 var OverwatchStats = angular.module('OverwatchStats', []);
 
 // TEST CODE
-var m1 = new match(MAP[0], 2500, OUTCOME.WIN, "10/07/16");
-var m2 = new match(MAP[11], 2434, OUTCOME.LOSS, "10/07/16");
+var m1 = new match(MAP[0], 2500, OUTCOME[1], "10/07/16");
+var m2 = new match(MAP[11], 2434, OUTCOME[2], "10/07/16");
 var matchesList = [];
 matchesList.push(m2);
 

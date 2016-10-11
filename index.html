@@ -18,7 +18,7 @@
       <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
 	</div>
     <ul>
-      <li ng-repeat="match in matches | orderBy:'-date':1" 
+      <li ng-repeat="match in matches | orderBy:'-date':1 | limitTo:5" 
           ng-class="{victoryStyle: match.outcome.value == 1, drawStyle: match.outcome.value == 2, defeatStyle: match.outcome.value == 0}">
         <div class="match_img"></div>
         <div class="match_name"><h3>{{match.map.name}}</h3></div>

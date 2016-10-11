@@ -17,8 +17,11 @@
       <input type="number" ng-model="newSR" placeholder="Finishing SR">
       <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
 	</div>
+      <div id="filter_options">
+          <button ng-click="reverseList()" id="reverseListButton">Reverse Order</button>
+      </div>
     <ul>
-      <li ng-repeat="match in matches" 
+      <li ng-repeat="match in matches | orderBy:'-date':reverse" 
           ng-class="{victoryStyle: match.outcome.value == 1, drawStyle: match.outcome.value == 2, defeatStyle: match.outcome.value == 0}">
         <div class="match_img"></div>
         <div class="match_name"><h3>{{match.map.name}}</h3></div>

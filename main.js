@@ -89,7 +89,7 @@ OverwatchStats.controller('matchListController',
 		var m = new match($scope.newMap, $scope.newSR, $scope.newOutcome, "");
 		$scope.matches.push(m);
 		addMatchLS(m);
-  }
+    }
 });
 
 //{"matches": [ {"map": x, "skillrating": x, "outcome": x, "date": x}, {...}, ... ]}

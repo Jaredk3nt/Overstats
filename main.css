@@ -1,26 +1,27 @@
 body {
-  	background: #333;
+  background: #222a38;
 }
 
 #title {
-  	text-align: center;
-    color: #fff;
-  	font-family: sans-serif;
+  text-align: center;
+  color: #fff;
+  font-family: sans-serif;
 }
 
 ul {
-  	list-style: none;
+  list-style: none;
 }
 
 li {
-	width: 80%;
-	height: 60px;
-	background: #fff;
-	margin: 5px auto;
+  width: 80%;
+  height: 60px;
+  background: #fff;
+  margin: 5px auto;
+
 }
 
 #addMatchButton {
- 	margin: 0 auto;
+  margin: 0 auto;
 }
 
 #new_match_wrapper {
@@ -31,7 +32,7 @@ li {
 .match_img {
   width: 50px;
   height: 50px;
-  background: #666;
+  background: #aaa;
   display: inline-block;
   float: left;
   margin: 5px;
@@ -51,15 +52,15 @@ li {
   font-family: sans-serif;
 }
 
-
-.greenStyle {
-  background: #8ee2a5;
+/* conditional formatting styles for list elements */
+.victoryStyle {
+  background: #5786d1;
 }
 
-.yellowStyle {
+.drawStyle {
   background: #fffa9e;
 }
 
-.redStyle {
-  background: #e54c44;
+.defeatStyle {
+  background:#e6574f;
 }

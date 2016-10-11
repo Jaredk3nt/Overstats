@@ -19,7 +19,7 @@
 	</div>
     <ul>
       <li ng-repeat="match in matches" 
-          ng-class="{greenStyle: match.outcome.value == 1, yellowStyle: match.outcome.value == 2, redStyle: match.outcome.value == 0}">
+          ng-class="{victoryStyle: match.outcome.value == 1, drawStyle: match.outcome.value == 2, defeatStyle: match.outcome.value == 0}">
         <div class="match_img"></div>
         <div class="match_name"><h3>{{match.map.name}}</h3></div>
         <div class="match_sr">SR: {{match.skillrating}}</div>

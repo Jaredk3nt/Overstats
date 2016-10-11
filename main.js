@@ -90,10 +90,6 @@ OverwatchStats.controller('matchListController',
 		$scope.matches.push(m);
 		addMatchLS(m);
     }
-    
-    $scope.reverseList = function() {
-        $scope.reverse = !$scope.reverse;
-    }
 });
 
 //{"matches": [ {"map": x, "skillrating": x, "outcome": x, "date": x}, {...}, ... ]}

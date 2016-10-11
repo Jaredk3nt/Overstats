@@ -44,7 +44,7 @@ var matchesList = [];
 
 
 window.onload = function () {
- 	//localStorage.clear();
+ 	//localStorage.clear(); //just in case (testing purposes only)
 };
 
 function loadFromStorage() {

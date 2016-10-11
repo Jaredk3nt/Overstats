@@ -85,6 +85,11 @@ OverwatchStats.controller('matchListController',
     $scope.outcomes = OUTCOME;
   
   	$scope.addMatch = function() {
+        // check input data
+        if ($scope.newMap == null || $scope.newOutcome == null || $scope.newSR == null || $scope.newSR < 0 || $scope.newSR > 5000) {
+            return;
+        }
+        
 	  	// grab values from modal
 		var m = new match($scope.newMap, $scope.newSR, $scope.newOutcome, "");
 		$scope.matches.push(m);

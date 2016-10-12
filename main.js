@@ -72,8 +72,7 @@ function addMatchLS(m) {
 function calculateWinPercentage(matches) {
     var winCount = 0;
     var matchCount = 0;
-    for (var x in matches) {
-        var match = matches[x];
+    for (var match of matches) {
         matchCount++;
         if (match.outcome.value === OUTCOME[1].value) {
             winCount++;

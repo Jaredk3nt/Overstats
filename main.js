@@ -123,7 +123,7 @@ OverwatchStats.controller('matchListController',
         $scope.matches.splice(count - index, 1);
         $scope.winPercentage = calculateWinPercentage($scope.matches);
         
-        //TODO: Remove from local storage
+        localStorage.setItem('matches', JSON.stringify($scope.matches));
     }
 });
 

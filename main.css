@@ -8,6 +8,10 @@ body {
   font-family: sans-serif;
 }
 
+p {
+    color: #fff;
+}
+
 ul {
   list-style: none;
 }
@@ -27,6 +31,10 @@ li {
 #new_match_wrapper {
   margin: 0 auto;
   text-align: center;
+}
+
+#win_percentage {
+    text-align: center;
 }
 
 .match_img {

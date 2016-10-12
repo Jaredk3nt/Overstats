@@ -69,6 +69,25 @@ function addMatchLS(m) {
     localStorage.setItem('matches', JSON.stringify(matches));
 }
 
+function calculateWinPercentage(matches) {
+    var winCount = 0;
+    var matchCount = 0;
+    for (var x in matches) {
+        var match = matches[x];
+        matchCount++;
+        if (match.outcome.value === OUTCOME[1].value) {
+            winCount++;
+        }
+    }
+    
+    if (matchCount > 0) {
+        var percent = (winCount / matchCount) * 100;
+        return Math.round(percent * 100) / 100
+    }
+    
+    return 0;
+}
+
 // ANGULAR LIST CONTROLLER
 OverwatchStats.controller('matchListController', 
                           function matchListController($scope) {
@@ -83,6 +102,8 @@ OverwatchStats.controller('matchListController',
 	
     $scope.maps = MAP;
     $scope.outcomes = OUTCOME;
+    
+    $scope.winPercentage = calculateWinPercentage($scope.matches);
   
   	$scope.addMatch = function() {
         // check input data
@@ -94,6 +115,8 @@ OverwatchStats.controller('matchListController',
 		var m = new match($scope.newMap, $scope.newSR, $scope.newOutcome, "");
 		$scope.matches.push(m);
 		addMatchLS(m);
+        
+        $scope.winPercentage = calculateWinPercentage($scope.matches);
     }
 });
 

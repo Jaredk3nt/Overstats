@@ -117,6 +117,14 @@ OverwatchStats.controller('matchListController',
         
         $scope.winPercentage = calculateWinPercentage($scope.matches);
     }
+    
+    $scope.remove = function(index) {
+        var count = $scope.matches.length - 1;
+        $scope.matches.splice(count - index, 1);
+        $scope.winPercentage = calculateWinPercentage($scope.matches);
+        
+        localStorage.setItem('matches', JSON.stringify($scope.matches));
+    }
 });
 
 //{"matches": [ {"map": x, "skillrating": x, "outcome": x, "date": x}, {...}, ... ]}

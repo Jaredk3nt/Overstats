@@ -53,11 +53,25 @@ li {
 }
 
 .match_sr {
-  float: right;
+  float: left;
   display: inline-block;
   margin-top: 20px;
   margin-right: 20px;
   font-family: sans-serif;
+}
+
+.match_delete {
+    float: right;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: firebrick;
+    margin: 15px 15px;
+}
+
+.match_right_elements {
+    float: right;
+    display: inline-block;
 }
 
 /* conditional formatting styles for list elements */

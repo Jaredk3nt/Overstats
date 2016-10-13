@@ -17,11 +17,21 @@ ul {
 }
 
 li {
-  width: 80%;
-  height: 60px;
-  background: #fff;
-  margin: 5px auto;
+  	width: 80%;
+  	height: 60px;
+  	background: #fff;
+  	margin: 5px auto;
+	border-radius: 2px;
+	box-shadow: 2px 2px 5px #0f1218;
+}
 
+li:hover {
+	width: 82%;
+}
+
+#list_wrapper {
+	width: 80%;
+	margin: 0 auto;
 }
 
 #addMatchButton {
@@ -35,6 +45,32 @@ li {
 
 #win_percentage {
     text-align: center;
+	font-family: sans-serif;
+	max-width: 100px;
+	padding: 25px;
+	margin: 0 auto;
+	background: #3f4e68;
+	border-radius: 3px;
+}
+
+#show_all_button {
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+#win_percentage p {
+	margin: 0px;
+}
+
+#win_percentage h2 {
+	color: #fff;
+	margin: 0px;
+}
+
+/*LIST ELEMENT CONTENTS*/
+.list_element_container {
+	display: inline;
 }
 
 .match_img {
@@ -46,29 +82,85 @@ li {
   margin: 5px;
 }
 
+/*MATCH NAME*/
 .match_name {
   display: inline-block;
   margin-left: 10px;
   font-family: sans-serif;
 }
 
+.match_name h3 {
+	margin-top: 12px;
+	margin-bottom: 0px;
+	color: #333;
+}
+
+.match_name p {
+	margin: 0px;
+	font-size: 14px;
+	color: #333;
+	padding-left: 10px;
+}
+
+.match_info {
+	display: inline-block;
+	float: right;
+	width: 30%;
+}
+
+/*sr*/
 .match_sr {
-  float: right;
-  display: inline-block;
-  margin-top: 20px;
-  margin-right: 20px;
-  font-family: sans-serif;
+ 	display: inline-block;
+	margin-top: 15px;
+  	font-family: sans-serif;
+	margin-right: 5%;
+	text-align: right;
+}
+
+.match_sr h3 {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.match_sr p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 8px;
+	color: #333;
+}
+
+.match_outcome {
+	display: inline-block;
+	width: 40%;
+	margin-right: 10%;
+}
+
+.match_outcome h2{
+	font-family: sans-serif;
+	font-size: 24px;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+.match_delete {
+    display: inline-block;
+	float: right;
+	height: 60px;
+    width: 10%;
+    background-color: firebrick;
 }
 
 /* conditional formatting styles for list elements */
 .victoryStyle {
-  background: #5786d1;
+  color: #5786d1;
 }
 
 .drawStyle {
-  background: #fffa9e;
+  color: #fffa9e;
 }
 
 .defeatStyle {
-  background:#e6574f;
+  color:#e6574f;
 }

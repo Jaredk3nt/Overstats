@@ -14,6 +14,7 @@ p {
 
 ul {
   list-style: none;
+	padding: 0px;
 }
 
 li {
@@ -43,29 +44,10 @@ li:hover {
   text-align: center;
 }
 
-#win_percentage {
-    text-align: center;
-	font-family: sans-serif;
-	max-width: 100px;
-	padding: 25px;
-	margin: 0 auto;
-	background: #3f4e68;
-	border-radius: 3px;
-}
-
 #show_all_button {
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 25px;
-}
-
-#win_percentage p {
-	margin: 0px;
-}
-
-#win_percentage h2 {
-	color: #fff;
-	margin: 0px;
 }
 
 /*LIST ELEMENT CONTENTS*/
@@ -150,6 +132,41 @@ li:hover {
 	height: 60px;
     width: 10%;
     background-color: firebrick;
+}
+
+/*STAT PANEL*/
+#stat_panel {
+	width: 80%;
+	margin: 0px auto;
+}
+
+.stat_item {
+	width: 33%;
+	display: inline-block;
+	background: #3f4e68;
+}
+
+#win_percentage {
+    text-align: center;
+	font-family: sans-serif;
+	border-radius: 3px;
+	padding: 0px;
+	margin: 0px;
+	height: 100px;
+	padding-top: 40px; 
+}
+
+#win_percentage p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 18px;
+}
+
+#win_percentage h2 {
+	color: #fff;
+	padding: 0px;
+	margin: 0px;
+	font-size: 34px;
 }
 
 /* conditional formatting styles for list elements */

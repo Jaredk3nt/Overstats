@@ -8,6 +8,12 @@ body {
   font-family: sans-serif;
 }
 
+#title h1 {
+	font-size: 40px;
+	padding: 0px;
+	margin: 10px 0px 20px 0px;
+}
+
 p {
     color: #fff;
 }
@@ -35,8 +41,24 @@ li:hover {
 	margin: 0 auto;
 }
 
+/*NEW MATCH*/
+#input_fields {
+	margin-bottom: 7px;
+}
+
 #addMatchButton {
-  margin: 0 auto;
+  	margin: 0 auto;
+	width: 10%;
+	height: 25px;
+	border-radius: 3px;
+	background: #fff;
+	border: none;
+	outline: none;
+}
+
+#addMatchButton:active {
+	background: #ddd;
+	outline: none;
 }
 
 #new_match_wrapper {
@@ -175,7 +197,7 @@ li:hover {
 }
 
 .drawStyle {
-  color: #fffa9e;
+  color: #ccc;
 }
 
 .defeatStyle {

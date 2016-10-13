@@ -12,9 +12,12 @@
   
   <div id="list_wrapper" ng-controller="matchListController">
 	<div id="new_match_wrapper">
-      <select ng-model="newMap" ng-options="x.name for x in maps"></select>
-      <select ng-model="newOutcome" ng-options="x.name for x in outcomes"></select>
-      <input type="number" ng-model="newSR" placeholder="Finishing SR">
+		<div id="input_fields">
+			<select ng-model="newMap" ng-options="x.name for x in maps"></select>
+		  	<select ng-model="newOutcome" ng-options="x.name for x in outcomes"></select>
+			<input type="number" ng-model="newSR" placeholder="Finishing SR">
+		</div>
+      
       <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
 	</div>
     <ul>

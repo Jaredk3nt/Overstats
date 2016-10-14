@@ -18,6 +18,38 @@ p {
     color: #fff;
 }
 
+/*BASE STATS*/
+#base_stats {
+	width: 80%;
+	margin: 0 auto;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.base_stat_item {
+	margin-right: 15px;
+	width: auto;
+	display: inline-block;
+	float: right;
+}
+
+#base_stats h3 {
+	color: #fff;
+	font-family: sans-serif;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+#base_stats p {
+	color: #fff;
+	font-family: sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 10px;
+	text-align: center;
+}
+/*LIST*/
 ul {
   list-style: none;
 	padding: 0px;
@@ -47,9 +79,6 @@ li:hover {
 }
 
 #addMatchButton {
-  	margin: 0 auto;
-	width: 10%;
-	height: 25px;
 	border-radius: 3px;
 	background: #fff;
 	border: none;

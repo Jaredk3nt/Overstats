@@ -16,12 +16,24 @@
 			<select ng-model="newMap" ng-options="x.name for x in maps"></select>
 		  	<select ng-model="newOutcome" ng-options="x.name for x in outcomes"></select>
 			<input type="number" ng-model="newSR" placeholder="Finishing SR">
+			<button ng-click="addMatch()" id="addMatchButton">Add Match</button>
 		</div>
       
-      <button ng-click="addMatch()" id="addMatchButton">Add Match</button>
+      
 	</div>
+	<div id="base_stats">
+		
+		<div class="base_stat_item">
+			<h3>{{winPercentage}}%</h3>
+			<p>WINRATE</p>
+		</div>
+		<div class="base_stat_item">
+			<h3>{{currentSR}}</h3>
+			<p>SKILL RATING</p>
+		</div>
+	  </div>
     <ul>
-      <li ng-repeat="match in matches | orderBy:'-date':1 | limitTo:5" 
+      <li ng-repeat="match in matches | orderBy:'-date':1 | limitTo:4" 
           >
 		  <div class="list_element_container">
 			<div class="match_img"></div>
@@ -42,7 +54,7 @@
         
       </li>
     </ul>
-	  <div id="show_all_button" >
+	  <div ng-show="matches.length > 4"id="show_all_button" >
 	  	<button>View All</button>
 	  </div>
 	  <div id="stat_panel">

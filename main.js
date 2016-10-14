@@ -12,7 +12,7 @@ var MAP = [
 	
 	{value: 7, name: "Dorado", code: "Payload"},
 	{value: 8, name: "Route 66", code: "Payload"},
-	{value: 9, name: "Watchpoint Gibraltar", code: "Payload"},
+	{value: 9, name: "Watchpoint: Gibraltar", code: "Payload"},
 	
 	{value: 10, name: "Volskaya Industries", code: "Assault"},
 	{value: 11, name: "Temple of Anubis", code: "Assault"},
@@ -98,7 +98,7 @@ OverwatchStats.controller('matchListController',
 	if($scope.matches === null){
 		$scope.matches = [];
 	}
-	
+	$scope.currentSR = $scope.matches[$scope.matches.length - 1].skillrating;
     $scope.maps = MAP;
     $scope.outcomes = OUTCOME;
     
@@ -116,6 +116,7 @@ OverwatchStats.controller('matchListController',
 		addMatchLS(m);
         
         $scope.winPercentage = calculateWinPercentage($scope.matches);
+		$scope.currentSR = $scope.newSR;
     }
     
     $scope.remove = function(index) {

@@ -232,3 +232,45 @@ li:hover {
 .defeatStyle {
   color:#e6574f;
 }
+
+
+/*MOBILE*/ 
+@media (max-width: 760px) {
+	.match_delete {
+		display: none;
+	}
+	
+	.match_info {
+		width: 40%;
+	}
+	
+	.match_outcome {
+		margin-right: 17%;
+	}
+	
+	li {
+		width: 100%;
+	}
+	
+	li:hover {
+		width: 99%;
+	}
+	
+	#list_wrapper {
+		width: 100%;
+	}
+	
+	#base_stats {
+		width: 100%;
+	}
+	
+	.stat_item {
+		width: 100%;
+	}
+}
+
+@media (max-width: 960px) {
+	.match_info {
+		width: 40%; 
+	}
+}

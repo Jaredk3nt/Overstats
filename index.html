@@ -15,7 +15,9 @@
 		<div id="input_fields">
 			<select ng-model="newMap" ng-options="x.name for x in maps"></select>
 		  	<select ng-model="newOutcome" ng-options="x.name for x in outcomes"></select>
-			<input type="number" ng-model="newSR" placeholder="Finishing SR">
+			<input type="number" ng-model="newSR" placeholder="Skill Rating">
+			 <input type="date" id="date" name="input" ng-model="newDate"
+       placeholder="yyyy-MM-dd"/>
 			<button ng-click="addMatch()" id="addMatchButton">Add Match</button>
 		</div>
       

@@ -18,6 +18,30 @@ p {
     color: #fff;
 }
 
+select {
+	height: 20px;
+	padding: 1px;
+}
+
+input {
+	height: 20px;
+	border-radius: 2px;
+	outline: none;
+	border: none;
+	font-size: 10px;
+	padding: 1px;
+}
+
+input[type=number] {
+	text-align: center;
+	width: 60px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 /*BASE STATS*/
 #base_stats {
 	width: 80%;

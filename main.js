@@ -110,6 +110,8 @@ OverwatchStats.controller('matchListController',
             return;
         }
         
+		console.log($scope.newDate);
+		
 	  	// grab values from modal
 		var m = new match($scope.newMap, $scope.newSR, $scope.newOutcome, "");
 		$scope.matches.push(m);

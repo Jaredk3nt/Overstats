@@ -8,6 +8,11 @@
 	<script src="main.js"></script>
 </head>
 <body>
+	<div id="h_top_bar">
+		<div id="back_button"><a href="index.html">back</a></div>
+		<div id="history_title"><h3>MATCH HISTORY</h3></div>
+	</div>
+	
 	<div id="list_wrapper" ng-controller="matchListController">
 		<ul>
 			<li ng-repeat="match in matches | orderBy:'-date':1" 

@@ -18,6 +18,11 @@ p {
     color: #fff;
 }
 
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
 select {
 	height: 20px;
 	padding: 1px;
@@ -256,6 +261,32 @@ li:hover {
 .defeatStyle {
   color:#e6574f;
 }
+
+/*MATCH HISTORY CSS*/
+#h_top_bar {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#back_button {
+	display: inline-block;
+	float: left;
+	margin-top: 20px;
+	color: #fff;
+	font-family: sans-serif;
+}
+
+#history_title {
+	display: inline-block;
+}
+
+#history_title h3 {
+	text-align: center;
+	font-family: sans-serif;
+	color: #fff;
+}
+
 
 
 /*MOBILE*/ 

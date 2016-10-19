@@ -1,5 +1,8 @@
 body {
-  background: #222a38;
+	width: 100%;
+	height: 100%;
+  	background: #222a38;
+	padding: 0px;
 }
 
 #title {
@@ -28,25 +31,7 @@ select {
 	padding: 1px;
 }
 
-input {
-	height: 20px;
-	border-radius: 2px;
-	outline: none;
-	border: none;
-	font-size: 10px;
-	padding: 1px;
-}
 
-input[type=number] {
-	text-align: center;
-	width: 60px;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
 /*BASE STATS*/
 #base_stats {
 	width: 80%;
@@ -287,7 +272,94 @@ li:hover {
 	color: #fff;
 }
 
+/*ADD MATCH MODAL*/
+#show_match_modal {
+	margin: 0 auto;
+	text-align: center;
+}
 
+#show_match_modal button {
+	width: 10%;
+	height: 25px;
+	background: #fff;
+	border: none;
+	border-radius: 3px;
+}
+
+#add_match_modal {
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin-top: 8%;
+	z-index: 10;
+}
+
+#new_match_wrapper {
+	margin: 0 auto;
+	background: #354258;
+	height: 200px;
+	width: 20%;
+	padding-top: 20px; padding-left: 40px; padding-right: 40px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #0f1218;
+}
+
+#input_fields div {
+	margin: 2%;
+}
+
+#select_map {
+	width: 80%;
+}
+
+#select_outcome {
+	width: 50%;
+	margin-right: 4%;
+}
+
+#new_match_title {
+	color: #fff;
+	font-family: sans-serif;
+	margin: 5px; margin-bottom: 15px;
+	text-align: center;
+}
+
+input {
+	height: 30px;
+	border-radius: 2px;
+	outline: none;
+	border: none;
+	font-size: 10px;
+	padding: 1px;
+}
+
+select {
+	line-height: 30px;
+}
+
+select:invalid {
+	color: #aaa;
+}
+
+input[type=number] {
+	text-align: center;
+	width: 23%;
+}
+
+input[type=date] {
+	width: 78%;
+	margin-bottom: 15px;
+}
+
+#close_button {
+	margin-right: 4%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 
 /*MOBILE*/ 
 @media (max-width: 760px) {
@@ -328,4 +400,17 @@ li:hover {
 	.match_info {
 		width: 40%; 
 	}
+}
+
+#overlay {
+	position   : absolute;
+    top        : 0;
+    left       : 0;
+    width      : 100%;
+    height     : 100%;
+    background : #000;
+    opacity    : 0.6;
+    filter     : alpha(opacity=60);
+    z-index    : 5;
+	display    : none;
 }

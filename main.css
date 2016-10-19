@@ -40,6 +40,43 @@ select {
 	margin-top: 10px;
 }
 
+#username {
+	display: inline;
+}
+
+#username h2{
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 24px;
+	display: inline-block;
+	padding: 0px;
+	margin-top: 5px;
+}
+
+#username_input {
+	display: none;
+	position: absolute;
+	width: 180px;
+	height: 35px;
+	font-size: 14px;
+	margin-top: 5px;
+	padding-left: 5px;
+}
+
+#change_name {
+	display: inline;
+}
+
+#change_name button {
+	padding: 7px;
+	margin: 0px;
+	-webkit-appearance: none;
+	background: #fff;
+	border: none;
+	border-radius: 0px 2px 2px 0px;
+	margin-bottom: 10px;
+}
+
 .base_stat_item {
 	margin-right: 15px;
 	width: auto;

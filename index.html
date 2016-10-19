@@ -45,6 +45,12 @@
 
 	<div id="base_stats">
 		
+		<div id="username">
+			<input id="username_input" type="text" ng-model="newUsername" ng-keypress="changeName($event)" placeholder="Username">
+			<h2>{{username}}</h2>
+		</div>
+		<div id="change_name"><button onclick="nameInput()"></button></div>
+		
 		<div class="base_stat_item">
 			<h3>{{winPercentage}}%</h3>
 			<p>WINRATE</p>
@@ -81,9 +87,7 @@
 	  </div>
 	  <div id="stat_panel">
 		  <div class="stat_item"></div>
-			<div id="win_percentage" class="stat_item">
-			  <p>Winrate</p>
-			  <h2 >{{winPercentage}}%</h2>
+			<div class="stat_item">
 			</div>
 			<div class="stat_item"></div>
 	  </div>

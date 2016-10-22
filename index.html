@@ -45,11 +45,10 @@
 
 	<div id="base_stats">
 		
-		<div id="username">
+		<div id="username" onclick="nameInput()">
 			<input id="username_input" type="text" ng-model="newUsername" ng-keypress="changeName($event)" placeholder="Username">
 			<h2>{{username}}</h2>
 		</div>
-		<div id="change_name"><button onclick="nameInput()"></button></div>
 		
 		<div class="base_stat_item">
 			<h3>{{winPercentage}}%</h3>

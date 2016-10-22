@@ -47,6 +47,10 @@ window.onload = function () {
 	//localStorage.clear(); //just in case (testing purposes only)
 };
 
+function nameInput() {
+	document.getElementById("username_input").style.display = "block";
+}
+
 function showMatchModal() {
 	"use strict";
 	var modal = document.getElementById("add_match_modal");
@@ -122,6 +126,7 @@ OverwatchStats.controller('matchListController', function matchListController($s
 	
     $scope.maps = MAP;
     $scope.outcomes = OUTCOME;
+	$scope.username = "Novakin#1349";
     
     $scope.winPercentage = calculateWinPercentage($scope.matches);
   
@@ -150,4 +155,11 @@ OverwatchStats.controller('matchListController', function matchListController($s
         
         localStorage.setItem('matches', JSON.stringify($scope.matches));
     };
+	
+	$scope.changeName = function (keyEvent) {
+		if (keyEvent.which === 13) {
+			$scope.username = $scope.newUsername;
+			document.getElementById("username_input").style.display = "none";
+		}
+	}
 });

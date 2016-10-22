@@ -1,0 +1,13 @@
+@import "compass/css3";
+@import "partials/config";
+@import "partials/base";
+
+
+/*MOBILE*/
+@media (max-width: 760px) {
+  @import "partials/media_760";
+}
+
+@media (max-width: 960px) {
+  @import "partials/media_960";
+}

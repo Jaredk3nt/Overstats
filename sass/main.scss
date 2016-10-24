@@ -143,6 +143,7 @@ li {
 /*NEW MATCH*/
 #input_fields {
   margin-bottom: 7px;
+  width: 80%;
   div {
     margin: 2%;
   }
@@ -449,10 +450,28 @@ input[type="number"]{
   .stat_item {
     width: 100%;
   }
+  
+  #show_match_modal {
+    button {
+      width: 25%;
+    }
+  }
+  
+  #new_match_wrapper {
+    width: 50%;
+  }
+  
+  #input_fields div {
+    margin: 0px;
+  }
 }
 
 @media (max-width: $width-medium) {
   .match_info {
     width: 40%;
+  }
+  
+  #new_match_wrapper {
+    width: 50%;
   }
 }

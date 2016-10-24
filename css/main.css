@@ -340,9 +340,18 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     width: 98%; }
 
   .stat_item {
-    width: 100%; } }
+    width: 100%; }
+
+  #show_match_modal button {
+    width: 25%; }
+
+  #new_match_wrapper {
+    width: 50%; } }
 @media (max-width: 960px) {
   .match_info {
-    width: 40%; } }
+    width: 40%; }
+
+  #new_match_wrapper {
+    width: 50%; } }
 
 /*# sourceMappingURL=main.css.map */

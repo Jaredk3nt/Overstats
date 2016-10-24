@@ -161,9 +161,16 @@ li:hover {
 #new_match_wrapper {
   text-align: center;
   margin: 0 auto;
+  background: #354258;
+  height: 200px;
+  width: 350px;
+  padding: 20px 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #0f1218;
+  max-width: 90%;
 }
 
-/* line 146, ../sass/partials/_base.scss */
+/* line 153, ../sass/partials/_base.scss */
 #show_all_button {
   text-align: center;
   margin: 0 auto;
@@ -171,12 +178,12 @@ li:hover {
 }
 
 /*LIST ELEMENT CONTENTS*/
-/* line 153, ../sass/partials/_base.scss */
+/* line 160, ../sass/partials/_base.scss */
 .list_element_container {
   display: inline;
 }
 
-/* line 157, ../sass/partials/_base.scss */
+/* line 164, ../sass/partials/_base.scss */
 .match_img {
   display: inline-block;
   float: left;
@@ -187,18 +194,18 @@ li:hover {
 }
 
 /*MATCH NAME*/
-/* line 167, ../sass/partials/_base.scss */
+/* line 174, ../sass/partials/_base.scss */
 .match_name {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 170, ../sass/partials/_base.scss */
+/* line 177, ../sass/partials/_base.scss */
 .match_name h3 {
   color: #333;
   margin-top: 12px;
   margin-bottom: 0;
 }
-/* line 175, ../sass/partials/_base.scss */
+/* line 182, ../sass/partials/_base.scss */
 .match_name p {
   font-size: 14px;
   color: #333;
@@ -206,7 +213,7 @@ li:hover {
   padding-left: 10px;
 }
 
-/* line 183, ../sass/partials/_base.scss */
+/* line 190, ../sass/partials/_base.scss */
 .match_info {
   display: inline-block;
   float: right;
@@ -214,20 +221,20 @@ li:hover {
 }
 
 /*sr*/
-/* line 190, ../sass/partials/_base.scss */
+/* line 197, ../sass/partials/_base.scss */
 .match_sr {
   display: inline-block;
   text-align: right;
   margin-top: 15px;
   margin-right: 5%;
 }
-/* line 195, ../sass/partials/_base.scss */
+/* line 202, ../sass/partials/_base.scss */
 .match_sr h3 {
   display: inline;
   margin: 0;
   padding: 0;
 }
-/* line 200, ../sass/partials/_base.scss */
+/* line 207, ../sass/partials/_base.scss */
 .match_sr p {
   font-size: 8px;
   color: #333;
@@ -235,13 +242,13 @@ li:hover {
   padding: 0;
 }
 
-/* line 208, ../sass/partials/_base.scss */
+/* line 215, ../sass/partials/_base.scss */
 .match_outcome {
   display: inline-block;
   width: 40%;
   margin-right: 10%;
 }
-/* line 212, ../sass/partials/_base.scss */
+/* line 219, ../sass/partials/_base.scss */
 .match_outcome h2 {
   font-size: 24px;
   margin: 0;
@@ -249,7 +256,7 @@ li:hover {
   width: auto;
 }
 
-/* line 220, ../sass/partials/_base.scss */
+/* line 227, ../sass/partials/_base.scss */
 .match_delete {
   display: inline-block;
   float: right;
@@ -259,20 +266,20 @@ li:hover {
 }
 
 /*STAT PANEL*/
-/* line 229, ../sass/partials/_base.scss */
+/* line 236, ../sass/partials/_base.scss */
 #stat_panel {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 234, ../sass/partials/_base.scss */
+/* line 241, ../sass/partials/_base.scss */
 .stat_item {
   display: inline-block;
   background: #3f4e68;
   width: 33%;
 }
 
-/* line 240, ../sass/partials/_base.scss */
+/* line 247, ../sass/partials/_base.scss */
 #win_percentage {
   text-align: center;
   border-radius: 3px;
@@ -281,13 +288,13 @@ li:hover {
   height: 100px;
   padding-top: 40px;
 }
-/* line 247, ../sass/partials/_base.scss */
+/* line 254, ../sass/partials/_base.scss */
 #win_percentage p {
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
-/* line 252, ../sass/partials/_base.scss */
+/* line 259, ../sass/partials/_base.scss */
 #win_percentage h2 {
   font-size: 34px;
   color: #fff;
@@ -296,30 +303,30 @@ li:hover {
 }
 
 /* conditional formatting styles for list elements */
-/* line 262, ../sass/partials/_base.scss */
+/* line 269, ../sass/partials/_base.scss */
 .victoryStyle {
   color: #5786d1;
 }
 
-/* line 266, ../sass/partials/_base.scss */
+/* line 273, ../sass/partials/_base.scss */
 .drawStyle {
   color: #ccc;
 }
 
-/* line 270, ../sass/partials/_base.scss */
+/* line 277, ../sass/partials/_base.scss */
 .defeatStyle {
   color: #e6574f;
 }
 
 /*MATCH HISTORY CSS*/
-/* line 275, ../sass/partials/_base.scss */
+/* line 282, ../sass/partials/_base.scss */
 #h_top_bar {
   text-align: center;
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 281, ../sass/partials/_base.scss */
+/* line 288, ../sass/partials/_base.scss */
 #back_button {
   display: inline-block;
   float: left;
@@ -327,23 +334,23 @@ li:hover {
   color: #fff;
 }
 
-/* line 288, ../sass/partials/_base.scss */
+/* line 295, ../sass/partials/_base.scss */
 #history_title {
   display: inline-block;
 }
-/* line 290, ../sass/partials/_base.scss */
+/* line 297, ../sass/partials/_base.scss */
 #history_title h3 {
   text-align: center;
   color: #fff;
 }
 
 /*ADD MATCH MODAL*/
-/* line 297, ../sass/partials/_base.scss */
+/* line 304, ../sass/partials/_base.scss */
 #show_match_modal {
   text-align: center;
   margin: 0 auto;
 }
-/* line 300, ../sass/partials/_base.scss */
+/* line 307, ../sass/partials/_base.scss */
 #show_match_modal button {
   background: #fff;
   width: 10%;
@@ -352,7 +359,7 @@ li:hover {
   border-radius: 3px;
 }
 
-/* line 309, ../sass/partials/_base.scss */
+/* line 316, ../sass/partials/_base.scss */
 #add_match_modal {
   position: absolute;
   display: none;
@@ -361,36 +368,25 @@ li:hover {
   z-index: 10;
 }
 
-/* line 317, ../sass/partials/_base.scss */
-#new_match_wrapper {
-  background: #354258;
-  height: 200px;
-  width: 20%;
-  margin: 0 auto;
-  padding: 20px 40px 0 40px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #0f1218;
-}
-
-/* line 327, ../sass/partials/_base.scss */
+/* line 324, ../sass/partials/_base.scss */
 #select_map {
   width: 80%;
 }
 
-/* line 331, ../sass/partials/_base.scss */
+/* line 328, ../sass/partials/_base.scss */
 #select_outcome {
   width: 50%;
   margin-right: 4%;
 }
 
-/* line 336, ../sass/partials/_base.scss */
+/* line 333, ../sass/partials/_base.scss */
 #new_match_title {
   text-align: center;
   color: #fff;
   margin: 5px 5px 15px;
 }
 
-/* line 342, ../sass/partials/_base.scss */
+/* line 339, ../sass/partials/_base.scss */
 input {
   height: 30px;
   border-radius: 2px;
@@ -399,38 +395,38 @@ input {
   font-size: 10px;
   padding: 1px;
 }
-/* line 349, ../sass/partials/_base.scss */
+/* line 346, ../sass/partials/_base.scss */
 input[type="number"] {
   text-align: center;
   width: 23%;
 }
-/* line 353, ../sass/partials/_base.scss */
+/* line 350, ../sass/partials/_base.scss */
 input[type="date"] {
   width: 78%;
   margin-bottom: 15px;
 }
 
-/* line 359, ../sass/partials/_base.scss */
+/* line 356, ../sass/partials/_base.scss */
 select {
   line-height: 30px;
 }
-/* line 361, ../sass/partials/_base.scss */
+/* line 358, ../sass/partials/_base.scss */
 select:invalid {
   color: #aaa;
 }
 
-/* line 376, ../sass/partials/_base.scss */
+/* line 373, ../sass/partials/_base.scss */
 #close_button {
   margin-right: 4%;
 }
 
-/* line 381, ../sass/partials/_base.scss */
+/* line 378, ../sass/partials/_base.scss */
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 387, ../sass/partials/_base.scss */
+/* line 384, ../sass/partials/_base.scss */
 #overlay {
   position: absolute;
   top: 0;

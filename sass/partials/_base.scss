@@ -141,6 +141,13 @@ li {
 #new_match_wrapper {
   text-align: center;
   margin: 0 auto;
+  background: #354258;
+  height: 200px;
+  width: 350px;
+  padding: 20px 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #0f1218;
+  max-width: 90%;
 }
 
 #show_all_button {
@@ -312,16 +319,6 @@ li {
   width: 100%;
   margin-top: 8%;
   z-index: 10;
-}
-
-#new_match_wrapper {
-  background: #354258;
-  height: 200px;
-  width: 20%;
-  margin: 0 auto;
-  padding: 20px 40px 0 40px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #0f1218;
 }
 
 #select_map {

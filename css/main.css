@@ -1,18 +1,10 @@
 body {
   font-family: sans-serif;
-  background: #222a38;
+  background-image: url("../siteBackground.jpg");
   width: 100%;
   height: 100%;
   padding: 0px;
   margin: 0px; }
-
-#title {
-  text-align: center;
-  color: #fff; }
-  #title h1 {
-    font-size: 40px;
-    padding: 0;
-    margin: 10px 0 20px; }
 
 p {
   color: #fff; }
@@ -25,59 +17,73 @@ select {
   height: 20px;
   padding: 1px; }
 
-/*BASE STATS*/
-#base_stats {
-  width: 80%;
-  height: 40px;
-  margin: 0 auto;
-  margin-top: 10px; }
-
-#username {
-  display: inline; }
-  #username h2 {
-    font-size: 24px;
+#header {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 52, 113, 0.3); }
+  #header #title {
     display: inline-block;
-    color: #fff;
-    padding: 0;
-    margin-top: 5px;
-    min-width: 50px; }
-  #username input {
-    display: none;
-    position: absolute;
-    font-size: 14px;
-    width: 180px;
-    height: 35px;
-    margin-top: 5px;
-    padding-left: 5px; }
+    text-align: left;
+    color: #fff; }
+    #header #title h1 {
+      font-size: 32px;
+      padding: 0;
+      margin: 10% 20% 10%;
+      font-weight: 300; }
+  #header #show_match_modal {
+    display: inline;
+    float: right;
+    height: auto;
+    width: auto; }
+    #header #show_match_modal button {
+      padding: 10px;
+      height: auto;
+      width: auto;
+      color: #fff;
+      font-size: 40px;
+      background: none;
+      border: none; }
 
-#change_name {
-  display: inline; }
-  #change_name button {
-    padding: 7px;
-    -webkit-appearance: none;
-    background: #fff;
-    border: none;
-    border-radius: 0px 2px 2px 0px;
-    margin: 0;
-    margin-bottom: 10px; }
-
-.base_stat_item {
-  display: inline-block;
-  float: right;
-  margin-right: 15px;
-  width: auto; }
-  .base_stat_item h3 {
-    text-align: center;
-    color: #fff;
-    margin: 0;
-    padding: 0; }
-
-#base_stats p {
-  font-size: 10px;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 0; }
+#main_info {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+  #main_info #username {
+    display: inline; }
+    #main_info #username h2 {
+      font-size: 32px;
+      display: inline-block;
+      color: #fff;
+      padding: 0;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      min-width: 50px; }
+    #main_info #username input {
+      display: none;
+      position: absolute;
+      font-size: 14px;
+      width: 250px;
+      height: 35px;
+      margin-top: 5px;
+      padding-left: 5px; }
+  #main_info .base_stat_item {
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    width: auto; }
+    #main_info .base_stat_item h3 {
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      padding: 0; }
+    #main_info .base_stat_item p {
+      font-size: 12px;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      padding: 0; }
 
 /*LIST*/
 ul {
@@ -100,7 +106,8 @@ li {
 
 /*NEW MATCH*/
 #input_fields {
-  margin-bottom: 7px; }
+  margin-bottom: 7px;
+  width: 80%; }
   #input_fields div {
     margin: 2%; }
 
@@ -242,16 +249,6 @@ li {
     color: #fff; }
 
 /*ADD MATCH MODAL*/
-#show_match_modal {
-  text-align: center;
-  margin: 0 auto; }
-  #show_match_modal button {
-    background: #fff;
-    width: 10%;
-    height: 25px;
-    border: none;
-    border-radius: 3px; }
-
 #add_match_modal {
   position: absolute;
   display: none;
@@ -346,7 +343,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     width: 25%; }
 
   #new_match_wrapper {
-    width: 50%; } }
+    width: 50%; }
+
+  #input_fields div {
+    margin: 0px; } }
 @media (max-width: 960px) {
   .match_info {
     width: 40%; }

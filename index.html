@@ -36,19 +36,18 @@
 	</div>
 
 	<div id="overlay"></div>
-  <div id="title"><h1>OVERSTAT</h1></div>
-  
-  <div id="list_wrapper" >
-	<div id="show_match_modal">
-	  	<button onclick="showMatchModal()">ADD MATCH</button>
+	
+	<div id="header">
+		<div id="title"><h1>OVERSTAT</h1></div>
+		<div id="show_match_modal">
+	  		<button onclick="showMatchModal()">+</button>
+		</div>
 	</div>
-
-	<div id="base_stats">
+	<div id="main_info">
 		<div id="username" onclick="nameInput()">
 			<input id="username_input" type="text" ng-model="newUsername" ng-keypress="changeName($event)" placeholder="Username">
 			<h2>{{username}}</h2>
 		</div>
-		
 		<div class="base_stat_item">
 			<h3>{{winPercentage}}%</h3>
 			<p>WINRATE</p>
@@ -57,38 +56,37 @@
 			<h3>{{currentSR}}</h3>
 			<p>SKILL RATING</p>
 		</div>
-	  </div>
-    <ul>
-      <li ng-repeat="match in matches | orderBy:'-date':1 | limitTo:4" 
-          >
-		  <div class="list_element_container">
-			<div class="match_img"></div>
-				<div class="match_name">
-					<h3>{{match.map.name}}</h3>
-					<p>{{match.map.code}} Map</p>
-				</div>
-				<div class="match_info">
-					<div class="match_outcome" ng-class="{victoryStyle: match.outcome.value == 1, drawStyle: match.outcome.value == 2, defeatStyle: match.outcome.value == 0}"><h2>{{match.outcome.name}}</h2></div>
-					<div class="match_sr">
-						<h3>{{match.skillrating}}</h3>
-						<p>SKILL RATING</p>
-					</div>
-					
-					<div class="match_delete" ng-click="remove($index)"></div>
-				</div>
-		  </div>
-        
-      </li>
-    </ul>
-	  <div ng-show="matches.length > 4"id="show_all_button" >
-	  	<a href="matchHistory.html"><button>View All</button></a>
-	  </div>
-	  <div id="stat_panel">
-		  <div class="stat_item"></div>
-			<div class="stat_item">
-			</div>
+	</div>
+	<div id="wrapper">
+		<div id="statistics">
 			<div class="stat_item"></div>
-	  </div>
-  </div>
+			<div class="stat_item"></div>
+		</div>
+		<div id="list_wrapper">
+			<ul>
+				<li ng-repeat="match in matches | orderBy:'-date':1 | limitTo:4" >
+		  			<div class="list_element_container">
+						<div class="match_img"></div>
+						<div class="match_name">
+							<h3>{{match.map.name}}</h3>
+							<p>{{match.map.code}} Map</p>
+						</div>
+						<div class="match_info">
+							<div class="match_outcome" ng-class="{victoryStyle: match.outcome.value == 1, drawStyle: match.outcome.value == 2, defeatStyle: match.outcome.value == 0}"><h2>{{match.outcome.name}}</h2></div>
+							<div class="match_sr">
+								<h3>{{match.skillrating}}</h3>
+								<p>SKILL RATING</p>
+							</div>
+
+							<div class="match_delete" ng-click="remove($index)"></div>
+						</div>
+		  			</div>
+      			</li>
+			</ul>
+			<div ng-show="matches.length > 4"id="show_all_button">
+	  			<a href="matchHistory.html"><button>View All</button></a>
+	  		</div>
+		</div>
+	</div>
 </body>
 </html>

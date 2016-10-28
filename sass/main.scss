@@ -8,7 +8,8 @@ $font_base_size: 16px;
 $color_base: #fff;
 $color_light: #ddd;
 $color_light_alt: #aaa;
-$color_primary: #222a38;
+$color_primary: #003471;
+
 $color_victory: #5786d1;
 $color_draw: #ccc;
 $color_defeat: #e6574f;
@@ -20,21 +21,11 @@ $font_style: sans-serif;
 //************** BODY STYLE ************//
 body {
   font-family: $font_style;
-  background: $color_primary;
+  background-image: url("../siteBackground.jpg");
   width: 100%;
   height: 100%;
   padding: 0px;
   margin: 0px;
-}
-
-#title {
-  text-align: center;
-  color: $color_base;
-  h1{
-    font-size: 40px;
-    padding: 0;
-    margin: 10px 0 20px;
-  }
 }
 
 p {
@@ -51,70 +42,85 @@ select {
   padding: 1px;
 }
 
-
-/*BASE STATS*/
-#base_stats {
-  width: 80%;
-  height: 40px;
-  margin: 0 auto;
-  margin-top: 10px;
+#header {
+	width: 100%;
+	height: auto;
+	background: rgba(0, 52, 113, 0.3);
+	#title {
+		display: inline-block;
+		text-align: left;
+  		color: $color_base;
+  		h1{
+			font-size: 32px;
+			padding: 0;
+			margin: 10% 20% 10%;
+			font-weight: 300;
+  		}
+	}
+	
+	#show_match_modal {
+		display: inline;
+		float: right;
+		height: auto;
+		width: auto;
+		button {
+			padding: 10px;
+			height: auto;
+			width: auto;
+			color: $color_base;
+			font-size: 40px;
+			background: none;
+			border: none;
+		}
+	}
 }
 
-#username {
-  display: inline;
-  h2{
-    font-size: 24px;
-    display: inline-block;
-    color: $color_base;
-    padding: 0;
-    margin-top: 5px;
-	min-width: 50px;
-  }
-  input{
-    display: none;
-    position: absolute;
-    font-size: 14px;
-    width: 180px;
-    height: 35px;
-    margin-top: 5px;
-    padding-left: 5px;
-  }
-}
-
-#change_name {
-  display: inline;
-  button {
-    padding: 7px;
-    -webkit-appearance: none;
-    background: $color_base;
-    border: none;
-    border-radius: 0px 2px 2px 0px;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-}
-
-.base_stat_item {
-  display: inline-block;
-  float: right;
-  margin-right: 15px;
-  width: auto;
-  h3 {
-    text-align: center;
-    color: $color_base;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-#base_stats{
-  p {
-    font-size: 10px;
-    text-align: center;
-    color: $color_base;
-    margin: 0;
-    padding: 0;
-  }
+#main_info {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	#username {
+		display: inline;
+		h2{
+			font-size: 32px;
+			display: inline-block;
+			color: $color_base;
+			padding: 0;
+			margin-top: 5px;
+			margin-bottom: 0px;
+			min-width: 50px;
+		}
+		input{
+			display: none;
+			position: absolute;
+			font-size: 14px;
+			width: 250px;
+			height: 35px;
+			margin-top: 5px;
+			padding-left: 5px;
+		}
+	}
+	.base_stat_item {
+		display: inline-block;
+		float: right;
+		margin-right: 15px;
+		width: auto;
+		h3 {
+			font-size: 18px;
+			text-align: center;
+			color: $color_base;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			font-size: 12px;
+			text-align: center;
+			color: $color_base;
+			margin: 0;
+			padding: 0;
+		}
+	}
 }
 
 /*LIST*/
@@ -316,17 +322,7 @@ li {
 }
 
 /*ADD MATCH MODAL*/
-#show_match_modal {
-  text-align: center;
-  margin: 0 auto;
-  button {
-    background: #fff;
-    width: 10%;
-    height: 25px;
-    border: none;
-    border-radius: 3px;
-  }
-}
+
 
 #add_match_modal {
   position: absolute;

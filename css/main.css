@@ -85,24 +85,90 @@ select {
       margin: 0;
       padding: 0; }
 
-/*LIST*/
-ul {
-  list-style: none;
-  padding: 0; }
-
-li {
-  width: 80%;
-  height: 60px;
-  background: #fff;
-  margin: 5px auto;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px #0f1218; }
-  li:hover {
-    width: 82%; }
-
-#list_wrapper {
-  width: 80%;
+#wrapper {
+  width: 90%;
+  height: auto;
   margin: 0 auto; }
+  #wrapper #statistics {
+    display: inline-block;
+    width: 28%;
+    margin-right: 1%; }
+    #wrapper #statistics .stat_item {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      background: #fff; }
+  #wrapper #list_wrapper {
+    width: 67%;
+    margin-left: 2%;
+    display: inline-block; }
+    #wrapper #list_wrapper ul {
+      list-style: none;
+      padding: 0; }
+      #wrapper #list_wrapper ul li {
+        width: 100%;
+        height: 75px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        box-shadow: 1px 1px 10px #777;
+        margin: 2% auto;
+        /*LIST ELEMENT CONTENTS*/
+        /*MATCH NAME*/ }
+        #wrapper #list_wrapper ul li .list_element_container {
+          display: inline; }
+        #wrapper #list_wrapper ul li .match_name {
+          display: inline-block;
+          margin-left: 4%; }
+          #wrapper #list_wrapper ul li .match_name h3 {
+            color: #fff;
+            font-size: 32px;
+            margin-top: 12px;
+            margin-bottom: 0; }
+          #wrapper #list_wrapper ul li .match_name p {
+            font-size: 14px;
+            color: #fff;
+            margin: 0;
+            padding-left: 10px; }
+        #wrapper #list_wrapper ul li .match_info {
+          display: inline-block;
+          float: right;
+          width: 40%; }
+        #wrapper #list_wrapper ul li .match_sr {
+          float: right;
+          display: inline-block;
+          text-align: right;
+          margin-top: 15px;
+          margin-right: 10%; }
+          #wrapper #list_wrapper ul li .match_sr h4 {
+            color: #fff;
+            margin: 0;
+            padding: 0; }
+          #wrapper #list_wrapper ul li .match_sr h3 {
+            font-size: 24px;
+            color: #fff;
+            display: inline;
+            margin: 0;
+            padding: 0; }
+        #wrapper #list_wrapper ul li .match_outcome {
+          display: inline-block;
+          width: 40%;
+          margin-right: 10%;
+          margin-top: 15px; }
+          #wrapper #list_wrapper ul li .match_outcome h2 {
+            font-size: 38px;
+            margin: 0;
+            padding: 0;
+            width: auto; }
+        #wrapper #list_wrapper ul li .match_delete {
+          display: inline-block;
+          float: right;
+          background-color: firebrick;
+          height: 75px;
+          width: 10%; }
+  #wrapper #show_all_button {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 25px; }
 
 /*NEW MATCH*/
 #input_fields {
@@ -123,102 +189,6 @@ li {
 #new_match_wrapper {
   text-align: center;
   margin: 0 auto; }
-
-#show_all_button {
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 25px; }
-
-/*LIST ELEMENT CONTENTS*/
-.list_element_container {
-  display: inline; }
-
-.match_img {
-  display: inline-block;
-  float: left;
-  width: 50px;
-  height: 50px;
-  background: #aaa;
-  margin: 5px; }
-
-/*MATCH NAME*/
-.match_name {
-  display: inline-block;
-  margin-left: 10px; }
-  .match_name h3 {
-    color: #333;
-    margin-top: 12px;
-    margin-bottom: 0; }
-  .match_name p {
-    font-size: 14px;
-    color: #333;
-    margin: 0;
-    padding-left: 10px; }
-
-.match_info {
-  display: inline-block;
-  float: right;
-  width: 30%; }
-
-/*sr*/
-.match_sr {
-  display: inline-block;
-  text-align: right;
-  margin-top: 15px;
-  margin-right: 5%; }
-  .match_sr h3 {
-    display: inline;
-    margin: 0;
-    padding: 0; }
-  .match_sr p {
-    font-size: 8px;
-    color: #333;
-    margin: 0;
-    padding: 0; }
-
-.match_outcome {
-  display: inline-block;
-  width: 40%;
-  margin-right: 10%; }
-  .match_outcome h2 {
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-    width: auto; }
-
-.match_delete {
-  display: inline-block;
-  float: right;
-  background-color: firebrick;
-  height: 60px;
-  width: 10%; }
-
-/*STAT PANEL*/
-#stat_panel {
-  width: 80%;
-  margin: 0 auto; }
-
-.stat_item {
-  display: inline-block;
-  background: #3f4e68;
-  width: 33%; }
-
-#win_percentage {
-  text-align: center;
-  border-radius: 3px;
-  padding: 0;
-  margin: 0;
-  height: 100px;
-  padding-top: 40px; }
-  #win_percentage p {
-    font-size: 18px;
-    margin: 0;
-    padding: 0; }
-  #win_percentage h2 {
-    font-size: 34px;
-    color: #fff;
-    padding: 0;
-    margin: 0; }
 
 /* conditional formatting styles for list elements */
 .victoryStyle {

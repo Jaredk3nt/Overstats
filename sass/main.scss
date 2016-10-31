@@ -293,6 +293,7 @@ select {
 		#input_fields {
 			width: 80%;
 			margin: 0 auto;
+			padding: 20px 40px 20px 40px;
 			.m_input {
 				height: 50px;
 				border-style: solid;
@@ -300,18 +301,43 @@ select {
 				border-width: 1px;
 				border-radius: 0px;
 				font-size: 18px;
+				margin-bottom: 10px;
 			}
 			#select_map {
 				width: 100%;
+				select {
+					width: 100%;
+				}
 			}
 			#select_outcome {
-				
+				width: 60%;
+				display: inline-block;
+				select {
+					width: 90%;
+				}
 			}
 			#select_sr {
-
+				width: 40%;
+				display: inline-block;
+				input {
+					width: 100%;
+					padding-right: 0px;
+					text-align: center;
+				}
 			}
 			#selct_date {
 				width: 100%;
+				input {
+					text-indent: 4px;
+					min-width: 100%;
+				}
+			}
+			h3 {
+				font-size: 14px;
+				font-weight: 400;
+				color: #ccc;
+				margin: 0px;
+				padding: 0px;
 			}
 		}
 		#modal_buttons {
@@ -327,6 +353,7 @@ select {
 				border: none;
 				padding-top: 10px;
 				padding-bottom: 10px;
+				outline: none;
 				
 			}
 			#close_button {
@@ -340,16 +367,6 @@ select {
 		}
 	}
 }
-
-//input[type=number] {
-//  text-align: center;
-//  width: 23%;
-//}
-
-//input[type=date] {
-//  width: 78%;
-//  margin-bottom: 15px;
-//}
 
 input[type="number"]{
   &::-webkit-inner-spin-button,&::-webkit-outer-spin-button {
@@ -372,58 +389,23 @@ input[type="number"]{
 }
 
 //************** MOBILE ***************//
-@media (max-width: $width-small) {
-  .match_delete {
-    display: none;
-  }
-  .match_info {
-    width: 40%;
-  }
-
-  .match_outcome {
-    margin-right: 17%;
-  }
-
-  li {
-    width: 98%;
-    &:hover {
-      width: 97%;
-    }
-  }
-
-  #list_wrapper {
-    width: 100%;
-  }
-
-  #base_stats {
-    width: 98%;
-  }
-
-  .stat_item {
-    width: 100%;
-  }
-  
-  #show_match_modal {
-    button {
-      width: 25%;
-    }
-  }
-  
-  #new_match_wrapper {
-    width: 50%;
-  }
-  
-  #input_fields div {
-    margin: 0px;
-  }
+@media screen and (max-width: $width-medium){
+	#wrapper {
+		#statistics {
+			display: block;
+			width: 100%;
+		}
+		#list_wrapper {
+			display: block;
+			width: 100%;
+		}
+	}
+	.match_info {
+		width: 40%;
+	}
+	#new_match_wrapper {
+		width: 80%;
+	}
 }
 
-@media (max-width: $width-medium) {
-  .match_info {
-    width: 40%;
-  }
-  
-  #new_match_wrapper {
-    width: 50%;
-  }
-}
+

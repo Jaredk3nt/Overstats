@@ -12,19 +12,26 @@
 	<div id="add_match_modal">
 		<div id="new_match_wrapper">
 			<div id="input_fields">
-				<div>
-					<select class="m_input" id="select_map" ng-model="newMap" ng-options="x.name for x in maps" required>
+				<div id="select_map">
+					<h3>MAP NAME</h3>
+					<select class="m_input"  ng-model="newMap" ng-options="x.name for x in maps" required>
 						<option value="" disabled selected hidden>Map</option>
 					</select>
 				</div>
 				<div>
-					<select class="m_input" id="select_outcome" ng-model="newOutcome" ng-options="x.name for x in outcomes" required>
-						<option value="" disabled selected hidden>Match Outcome</option>
-					</select>
-					<input class="m_input"  id="select_sr" type="number" ng-model="newSR" placeholder="Skill Rating">
+					<div id="select_outcome">
+						<h3>OUTCOME</h3>
+						<select class="m_input"  ng-model="newOutcome" ng-options="x.name for x in outcomes" required>
+							<option value="" disabled selected hidden>Outcome</option>
+						</select>
+					</div><div id="select_sr">
+						<h3>SKILL RATING</h3>
+						<input class="m_input"   type="number" ng-model="newSR" placeholder="1234">
+					</div>
 				</div>
-				<div>
-					<input class="m_input" type="date" id="select_date" name="input" ng-model="newDate" placeholder="yyyy-MM-dd"/>
+				<div id="select_date">
+					<h3>DATE</h3>
+					<input class="m_input" type="date"  name="input" ng-model="newDate" placeholder="yyyy-MM-dd"/>
 				</div>
 			</div>
 			<div id="modal_buttons">

@@ -216,18 +216,43 @@ select {
     box-shadow: 2px 2px 5px #0f1218; }
     #add_match_modal #new_match_wrapper #input_fields {
       width: 80%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 20px 40px 20px 40px; }
       #add_match_modal #new_match_wrapper #input_fields .m_input {
         height: 50px;
         border-style: solid;
         border-color: #ddd;
         border-width: 1px;
         border-radius: 0px;
-        font-size: 18px; }
+        font-size: 18px;
+        margin-bottom: 10px; }
       #add_match_modal #new_match_wrapper #input_fields #select_map {
         width: 100%; }
+        #add_match_modal #new_match_wrapper #input_fields #select_map select {
+          width: 100%; }
+      #add_match_modal #new_match_wrapper #input_fields #select_outcome {
+        width: 60%;
+        display: inline-block; }
+        #add_match_modal #new_match_wrapper #input_fields #select_outcome select {
+          width: 90%; }
+      #add_match_modal #new_match_wrapper #input_fields #select_sr {
+        width: 40%;
+        display: inline-block; }
+        #add_match_modal #new_match_wrapper #input_fields #select_sr input {
+          width: 100%;
+          padding-right: 0px;
+          text-align: center; }
       #add_match_modal #new_match_wrapper #input_fields #selct_date {
         width: 100%; }
+        #add_match_modal #new_match_wrapper #input_fields #selct_date input {
+          text-indent: 4px;
+          min-width: 100%; }
+      #add_match_modal #new_match_wrapper #input_fields h3 {
+        font-size: 14px;
+        font-weight: 400;
+        color: #ccc;
+        margin: 0px;
+        padding: 0px; }
     #add_match_modal #new_match_wrapper #modal_buttons {
       width: 100%; }
       #add_match_modal #new_match_wrapper #modal_buttons .m_button {
@@ -239,7 +264,8 @@ select {
         background: #eee;
         border: none;
         padding-top: 10px;
-        padding-bottom: 10px; }
+        padding-bottom: 10px;
+        outline: none; }
       #add_match_modal #new_match_wrapper #modal_buttons #close_button {
         color: #e6574f;
         border-radius: 0px 0px 0px 2px; }
@@ -263,43 +289,18 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   z-index: 5;
   display: none; }
 
-@media (max-width: 760px) {
-  .match_delete {
-    display: none; }
+@media screen and (max-width: 960px) {
+  #wrapper #statistics {
+    display: block;
+    width: 100%; }
+  #wrapper #list_wrapper {
+    display: block;
+    width: 100%; }
 
   .match_info {
     width: 40%; }
 
-  .match_outcome {
-    margin-right: 17%; }
-
-  li {
-    width: 98%; }
-    li:hover {
-      width: 97%; }
-
-  #list_wrapper {
-    width: 100%; }
-
-  #base_stats {
-    width: 98%; }
-
-  .stat_item {
-    width: 100%; }
-
-  #show_match_modal button {
-    width: 25%; }
-
   #new_match_wrapper {
-    width: 50%; }
-
-  #input_fields div {
-    margin: 0px; } }
-@media (max-width: 960px) {
-  .match_info {
-    width: 40%; }
-
-  #new_match_wrapper {
-    width: 50%; } }
+    width: 80%; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,18 +1,10 @@
 body {
   font-family: sans-serif;
-  background: #222a38;
+  background-image: url("../siteBackground.jpg");
   width: 100%;
   height: 100%;
   padding: 0px;
   margin: 0px; }
-
-#title {
-  text-align: center;
-  color: #fff; }
-  #title h1 {
-    font-size: 40px;
-    padding: 0;
-    margin: 10px 0 20px; }
 
 p {
   color: #fff; }
@@ -25,193 +17,179 @@ select {
   height: 20px;
   padding: 1px; }
 
-/*BASE STATS*/
-#base_stats {
-  width: 80%;
-  height: 40px;
-  margin: 0 auto;
-  margin-top: 10px; }
-
-#username {
-  display: inline; }
-  #username h2 {
-    font-size: 24px;
+#header {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 52, 113, 0.3); }
+  #header #title {
     display: inline-block;
-    color: #fff;
-    padding: 0;
-    margin-top: 5px;
-    min-width: 50px; }
-  #username input {
-    display: none;
-    position: absolute;
-    font-size: 14px;
-    width: 180px;
-    height: 35px;
-    margin-top: 5px;
-    padding-left: 5px; }
-
-#change_name {
-  display: inline; }
-  #change_name button {
-    padding: 7px;
-    -webkit-appearance: none;
-    background: #fff;
-    border: none;
-    border-radius: 0px 2px 2px 0px;
-    margin: 0;
-    margin-bottom: 10px; }
-
-.base_stat_item {
-  display: inline-block;
-  float: right;
-  margin-right: 15px;
-  width: auto; }
-  .base_stat_item h3 {
-    text-align: center;
-    color: #fff;
-    margin: 0;
-    padding: 0; }
-
-#base_stats p {
-  font-size: 10px;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 0; }
-
-/*LIST*/
-ul {
-  list-style: none;
-  padding: 0; }
-
-li {
-  width: 80%;
-  height: 60px;
-  background: #fff;
-  margin: 5px auto;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px #0f1218; }
-  li:hover {
-    width: 82%; }
-
-#list_wrapper {
-  width: 80%;
-  margin: 0 auto; }
-
-/*NEW MATCH*/
-#input_fields {
-  margin-bottom: 7px; }
-  #input_fields div {
-    margin: 2%; }
-
-#addMatchButton {
-  border-radius: 3px;
-  background: #fff;
-  border: none;
-  outline: none; }
-  #addMatchButton:active {
-    background: #ddd;
-    outline: none; }
-
-#new_match_wrapper {
-  text-align: center;
-  margin: 0 auto; }
-
-#show_all_button {
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 25px; }
-
-/*LIST ELEMENT CONTENTS*/
-.list_element_container {
-  display: inline; }
-
-.match_img {
-  display: inline-block;
-  float: left;
-  width: 50px;
-  height: 50px;
-  background: #aaa;
-  margin: 5px; }
-
-/*MATCH NAME*/
-.match_name {
-  display: inline-block;
-  margin-left: 10px; }
-  .match_name h3 {
-    color: #333;
-    margin-top: 12px;
-    margin-bottom: 0; }
-  .match_name p {
-    font-size: 14px;
-    color: #333;
-    margin: 0;
-    padding-left: 10px; }
-
-.match_info {
-  display: inline-block;
-  float: right;
-  width: 30%; }
-
-/*sr*/
-.match_sr {
-  display: inline-block;
-  text-align: right;
-  margin-top: 15px;
-  margin-right: 5%; }
-  .match_sr h3 {
+    text-align: left;
+    color: #fff; }
+    #header #title h1 {
+      font-size: 32px;
+      padding: 0;
+      margin: 10% 20% 10%;
+      font-weight: 300; }
+  #header #show_match_modal {
     display: inline;
-    margin: 0;
-    padding: 0; }
-  .match_sr p {
-    font-size: 8px;
-    color: #333;
-    margin: 0;
-    padding: 0; }
-
-.match_outcome {
-  display: inline-block;
-  width: 40%;
-  margin-right: 10%; }
-  .match_outcome h2 {
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
+    float: right;
+    height: auto;
     width: auto; }
+    #header #show_match_modal button {
+      padding: 10px;
+      height: auto;
+      width: auto;
+      color: #fff;
+      font-size: 40px;
+      background: none;
+      border: none; }
 
-.match_delete {
-  display: inline-block;
-  float: right;
-  background-color: firebrick;
-  height: 60px;
-  width: 10%; }
+#history_header {
+  text-align: center; }
+  #history_header #back_button {
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    padding-left: 20px;
+    color: #fff; }
+  #history_header #history_title {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    right: -20px; }
+    #history_header #history_title h3 {
+      text-align: center;
+      color: #fff; }
 
-/*STAT PANEL*/
-#stat_panel {
-  width: 80%;
+#main_info {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+  #main_info #username {
+    display: inline;
+    min-width: 150px; }
+    #main_info #username h2 {
+      font-size: 32px;
+      display: inline-block;
+      color: #fff;
+      padding: 0;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      min-width: 150px; }
+    #main_info #username input {
+      display: none;
+      position: absolute;
+      font-size: 14px;
+      width: 250px;
+      height: 35px;
+      margin-top: 5px;
+      padding-left: 5px; }
+  #main_info .base_stat_item {
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    width: auto; }
+    #main_info .base_stat_item h3 {
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      padding: 0; }
+    #main_info .base_stat_item p {
+      font-size: 12px;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      padding: 0; }
+
+#wrapper {
+  width: 90%;
+  height: auto;
   margin: 0 auto; }
-
-.stat_item {
-  display: inline-block;
-  background: #3f4e68;
-  width: 33%; }
-
-#win_percentage {
-  text-align: center;
-  border-radius: 3px;
-  padding: 0;
-  margin: 0;
-  height: 100px;
-  padding-top: 40px; }
-  #win_percentage p {
-    font-size: 18px;
-    margin: 0;
-    padding: 0; }
-  #win_percentage h2 {
-    font-size: 34px;
-    color: #fff;
-    padding: 0;
-    margin: 0; }
+  #wrapper #statistics {
+    display: inline-block;
+    width: 28%;
+    margin-right: 1%; }
+    #wrapper #statistics .stat_item {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      background: #fff; }
+  #wrapper #list_wrapper {
+    width: 67%;
+    margin-left: 2%;
+    display: inline-block;
+    margin: 0 auto; }
+    #wrapper #list_wrapper ul {
+      list-style: none;
+      padding: 0; }
+      #wrapper #list_wrapper ul li {
+        width: 100%;
+        height: 75px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        box-shadow: 1px 2px 10px #999;
+        margin: 2% auto;
+        /*LIST ELEMENT CONTENTS*/
+        /*MATCH NAME*/ }
+        #wrapper #list_wrapper ul li:hover {
+          background: rgba(255, 255, 255, 0.65); }
+        #wrapper #list_wrapper ul li .list_element_container {
+          display: inline; }
+        #wrapper #list_wrapper ul li .match_name {
+          display: inline-block;
+          margin-left: 4%; }
+          #wrapper #list_wrapper ul li .match_name h3 {
+            color: #fff;
+            font-size: 32px;
+            margin-top: 12px;
+            margin-bottom: 0; }
+          #wrapper #list_wrapper ul li .match_name p {
+            font-size: 14px;
+            color: #fff;
+            margin: 0;
+            padding-left: 10px; }
+        #wrapper #list_wrapper ul li .match_info {
+          display: inline-block;
+          float: right;
+          width: 40%; }
+        #wrapper #list_wrapper ul li .match_sr {
+          float: right;
+          display: inline-block;
+          text-align: right;
+          margin-top: 15px;
+          margin-right: 10%; }
+          #wrapper #list_wrapper ul li .match_sr h4 {
+            color: #fff;
+            margin: 0;
+            padding: 0; }
+          #wrapper #list_wrapper ul li .match_sr h3 {
+            font-size: 24px;
+            color: #fff;
+            display: inline;
+            margin: 0;
+            padding: 0; }
+        #wrapper #list_wrapper ul li .match_outcome {
+          display: inline-block;
+          width: 40%;
+          margin-right: 10%;
+          margin-top: 15px; }
+          #wrapper #list_wrapper ul li .match_outcome h2 {
+            font-size: 38px;
+            margin: 0;
+            padding: 0;
+            width: auto; }
+        #wrapper #list_wrapper ul li .match_delete {
+          display: inline-block;
+          float: right;
+          background-color: firebrick;
+          height: 75px;
+          width: 10%; }
+  #wrapper #show_all_button {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 25px; }
 
 /* conditional formatting styles for list elements */
 .victoryStyle {
@@ -224,83 +202,80 @@ li {
   color: #e6574f; }
 
 /*MATCH HISTORY CSS*/
-#h_top_bar {
-  text-align: center;
-  width: 100%;
-  margin: 0 auto; }
-
-#back_button {
-  display: inline-block;
-  float: left;
-  margin-top: 20px;
-  color: #fff; }
-
-#history_title {
-  display: inline-block; }
-  #history_title h3 {
-    text-align: center;
-    color: #fff; }
-
 /*ADD MATCH MODAL*/
-#show_match_modal {
-  text-align: center;
-  margin: 0 auto; }
-  #show_match_modal button {
-    background: #fff;
-    width: 10%;
-    height: 25px;
-    border: none;
-    border-radius: 3px; }
-
 #add_match_modal {
   position: absolute;
   display: none;
   width: 100%;
   margin-top: 8%;
   z-index: 10; }
-
-#new_match_wrapper {
-  background: #354258;
-  height: 200px;
-  width: 20%;
-  margin: 0 auto;
-  padding: 20px 40px 0 40px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #0f1218; }
-
-#select_map {
-  width: 80%; }
-
-#select_outcome {
-  width: 50%;
-  margin-right: 4%; }
-
-#new_match_title {
-  text-align: center;
-  color: #fff;
-  margin: 5px 5px 15px; }
-
-input {
-  height: 30px;
-  border-radius: 2px;
-  outline: none;
-  border: none;
-  font-size: 10px;
-  padding: 1px; }
-  input[type="number"] {
-    text-align: center;
-    width: 23%; }
-  input[type="date"] {
-    width: 78%;
-    margin-bottom: 15px; }
-
-select {
-  line-height: 30px; }
-  select:invalid {
-    color: #aaa; }
-
-#close_button {
-  margin-right: 4%; }
+  #add_match_modal #new_match_wrapper {
+    background: #fff;
+    height: auto;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px #0f1218; }
+    #add_match_modal #new_match_wrapper #input_fields {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px 40px 20px 40px; }
+      #add_match_modal #new_match_wrapper #input_fields .m_input {
+        height: 50px;
+        border-style: solid;
+        border-color: #ddd;
+        border-width: 1px;
+        border-radius: 0px;
+        font-size: 18px;
+        margin-bottom: 10px; }
+      #add_match_modal #new_match_wrapper #input_fields #select_map {
+        width: 100%; }
+        #add_match_modal #new_match_wrapper #input_fields #select_map select {
+          width: 100%; }
+      #add_match_modal #new_match_wrapper #input_fields #select_outcome {
+        width: 60%;
+        display: inline-block; }
+        #add_match_modal #new_match_wrapper #input_fields #select_outcome select {
+          width: 90%; }
+      #add_match_modal #new_match_wrapper #input_fields #select_sr {
+        width: 40%;
+        display: inline-block; }
+        #add_match_modal #new_match_wrapper #input_fields #select_sr input {
+          width: 100%;
+          padding-right: 0px;
+          text-align: center; }
+      #add_match_modal #new_match_wrapper #input_fields #selct_date {
+        width: 100%; }
+        #add_match_modal #new_match_wrapper #input_fields #selct_date input {
+          text-indent: 4px;
+          min-width: 100%; }
+      #add_match_modal #new_match_wrapper #input_fields h3 {
+        font-size: 14px;
+        font-weight: 400;
+        color: #ccc;
+        margin: 0px;
+        padding: 0px; }
+    #add_match_modal #new_match_wrapper #modal_buttons {
+      width: 100%; }
+      #add_match_modal #new_match_wrapper #modal_buttons .m_button {
+        display: inline;
+        width: 50%;
+        font-size: 24px;
+        padding: 0px;
+        margin: 0px;
+        background: #f6f6f6;
+        border: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        outline: none; }
+        #add_match_modal #new_match_wrapper #modal_buttons .m_button:hover {
+          background: #eee; }
+      #add_match_modal #new_match_wrapper #modal_buttons #close_button {
+        color: #e6574f;
+        border-radius: 0px 0px 0px 2px; }
+      #add_match_modal #new_match_wrapper #modal_buttons #add_match_button {
+        color: #5786d1;
+        border-radius: 0px 0px 2px 0px; }
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -318,40 +293,35 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   z-index: 5;
   display: none; }
 
-@media (max-width: 760px) {
-  .match_delete {
-    display: none; }
+@media screen and (max-width: 960px) {
+  #wrapper #statistics {
+    display: block;
+    width: 100%; }
+  #wrapper #list_wrapper {
+    display: block;
+    width: 100%;
+    margin: 0px; }
 
   .match_info {
     width: 40%; }
 
-  .match_outcome {
-    margin-right: 17%; }
-
-  li {
-    width: 98%; }
-    li:hover {
-      width: 97%; }
-
-  #list_wrapper {
-    width: 100%; }
-
-  #base_stats {
-    width: 98%; }
-
-  .stat_item {
-    width: 100%; }
-
-  #show_match_modal button {
-    width: 25%; }
-
   #new_match_wrapper {
-    width: 50%; } }
-@media (max-width: 960px) {
-  .match_info {
-    width: 40%; }
+    width: 80%; } }
+@media screen and (max-width: 660px) {
+  #main_info #username #username_input {
+    width: 150px; }
+  #main_info #username h2 {
+    font-size: 24px; }
 
-  #new_match_wrapper {
-    width: 50%; } }
+  #wrapper #list_wrapper ul li {
+    height: 65px; }
+    #wrapper #list_wrapper ul li .match_name h3 {
+      font-size: 18px; }
+    #wrapper #list_wrapper ul li .match_info .match_outcome h2 {
+      font-size: 24px; }
+    #wrapper #list_wrapper ul li .match_info .match_sr h4 {
+      font-size: 14px; }
+    #wrapper #list_wrapper ul li .match_info .match_sr h3 {
+      font-size: 16px; } }
 
 /*# sourceMappingURL=main.css.map */

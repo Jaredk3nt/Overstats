@@ -1,5 +1,5 @@
 //************** SIZES ************//
-$width-small: 760px;
+$width-small: 660px;
 $width-medium: 960px;
 
 $font_base_size: 16px;
@@ -8,9 +8,10 @@ $font_base_size: 16px;
 $color_base: #fff;
 $color_light: #ddd;
 $color_light_alt: #aaa;
-$color_primary: #222a38;
+$color_primary: #003471;
+
 $color_victory: #5786d1;
-$color_draw: #ccc;
+$color_draw: #999;
 $color_defeat: #e6574f;
 
 //************** FONT STYLE ************//
@@ -20,21 +21,11 @@ $font_style: sans-serif;
 //************** BODY STYLE ************//
 body {
   font-family: $font_style;
-  background: $color_primary;
+  background-image: url("../siteBackground.jpg");
   width: 100%;
   height: 100%;
   padding: 0px;
   margin: 0px;
-}
-
-#title {
-  text-align: center;
-  color: $color_base;
-  h1{
-    font-size: 40px;
-    padding: 0;
-    margin: 10px 0 20px;
-  }
 }
 
 p {
@@ -51,233 +42,223 @@ select {
   padding: 1px;
 }
 
-
-/*BASE STATS*/
-#base_stats {
-  width: 80%;
-  height: 40px;
-  margin: 0 auto;
-  margin-top: 10px;
+#header {
+	width: 100%;
+	height: auto;
+	background: rgba(0, 52, 113, 0.3);
+	#title {
+		display: inline-block;
+		text-align: left;
+  		color: $color_base;
+  		h1{
+			font-size: 32px;
+			padding: 0;
+			margin: 10% 20% 10%;
+			font-weight: 300;
+  		}
+	}
+	
+	#show_match_modal {
+		display: inline;
+		float: right;
+		height: auto;
+		width: auto;
+		button {
+			padding: 10px;
+			height: auto;
+			width: auto;
+			color: $color_base;
+			font-size: 40px;
+			background: none;
+			border: none;
+		}
+	}
 }
 
-#username {
-  display: inline;
-  h2{
-    font-size: 24px;
-    display: inline-block;
-    color: $color_base;
-    padding: 0;
-    margin-top: 5px;
-	min-width: 50px;
-  }
-  input{
-    display: none;
-    position: absolute;
-    font-size: 14px;
-    width: 180px;
-    height: 35px;
-    margin-top: 5px;
-    padding-left: 5px;
-  }
+#history_header {
+	text-align: center;
+	#back_button {
+		display: inline-block;
+		float: left;
+		margin-top: 20px;
+		padding-left: 20px;
+		color: #fff;
+	}
+	#history_title {
+		display: inline-block;
+		margin: 0 auto;
+		text-align: center;
+		right: -20px;
+		h3 {
+			text-align: center;
+			color: #fff;
+		}
+	}
 }
 
-#change_name {
-  display: inline;
-  button {
-    padding: 7px;
-    -webkit-appearance: none;
-    background: $color_base;
-    border: none;
-    border-radius: 0px 2px 2px 0px;
-    margin: 0;
-    margin-bottom: 10px;
-  }
+#main_info {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	#username {
+		display: inline;
+		min-width: 150px;
+		h2{
+			font-size: 32px;
+			display: inline-block;
+			color: $color_base;
+			padding: 0;
+			margin-top: 5px;
+			margin-bottom: 0px;
+			min-width: 150px;
+		}
+		input{
+			display: none;
+			position: absolute;
+			font-size: 14px;
+			width: 250px;
+			height: 35px;
+			margin-top: 5px;
+			padding-left: 5px;
+		}
+	}
+	.base_stat_item {
+		display: inline-block;
+		float: right;
+		margin-right: 15px;
+		width: auto;
+		h3 {
+			font-size: 18px;
+			text-align: center;
+			color: $color_base;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			font-size: 12px;
+			text-align: center;
+			color: $color_base;
+			margin: 0;
+			padding: 0;
+		}
+	}
 }
 
-.base_stat_item {
-  display: inline-block;
-  float: right;
-  margin-right: 15px;
-  width: auto;
-  h3 {
-    text-align: center;
-    color: $color_base;
-    margin: 0;
-    padding: 0;
-  }
+#wrapper {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	#statistics {
+		display: inline-block;
+		width: 28%;
+		margin-right: 1%;
+		.stat_item {
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			background: $color_base;
+		}
+	}
+	#list_wrapper {
+		width: 67%;
+		margin-left: 2%;
+		display: inline-block;
+		margin: 0 auto;
+		ul {
+ 			list-style: none;
+			padding: 0;
+			li {
+				width: 100%;
+				height: 75px;
+				background: rgba(255, 255, 255, 0.6);
+				border-radius: 4px;
+				box-shadow: 1px 2px 10px #999;
+				margin: 2% auto;
+				
+				&:hover {
+					background: rgba(255, 255, 255, 0.65);
+				}
+				
+				/*LIST ELEMENT CONTENTS*/
+				.list_element_container {
+					display: inline;
+				}
+
+				/*MATCH NAME*/
+				.match_name {
+					display: inline-block;
+					margin-left: 4%;
+					h3 {
+						color: $color_base;
+						font-size: 32px;
+						margin-top: 12px;
+						margin-bottom: 0;
+					}
+					p {
+						font-size: 14px;
+						color: $color_base;
+						margin: 0;
+						padding-left: 10px;
+					}
+				}
+
+				.match_info {
+					display: inline-block;
+					float: right;
+					width: 40%;
+				}
+
+				.match_sr {
+					float: right;
+					display: inline-block;
+					text-align: right;
+					margin-top: 15px;
+					margin-right: 10%;
+					h4 {
+						color: $color_base;
+						margin: 0;
+						padding: 0;
+					}
+					h3 {
+						font-size: 24px;
+						color: $color_base;
+						display: inline;
+						margin: 0;
+						padding: 0;
+					}
+				}
+
+				.match_outcome {
+					display: inline-block;
+					width: 40%;
+					margin-right: 10%;
+					margin-top: 15px;
+					h2{
+						font-size: 38px;
+						margin: 0;
+						padding: 0;
+						width: auto;
+					}
+				}
+
+				.match_delete {
+					display: inline-block;
+					float: right;
+					background-color: firebrick;
+					height: 75px;
+					width: 10%;
+				}
+			}
+		}
+	}
+	#show_all_button {
+		text-align: center;
+		margin: 0 auto;
+		padding-bottom: 25px;
+	}
 }
 
-#base_stats{
-  p {
-    font-size: 10px;
-    text-align: center;
-    color: $color_base;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-/*LIST*/
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  width: 80%;
-  height: 60px;
-  background: $color_base;
-  margin: 5px auto;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px #0f1218;
-  &:hover {
-    width: 82%;
-  }
-}
-
-#list_wrapper {
-  width: 80%;
-  margin: 0 auto;
-}
-
-/*NEW MATCH*/
-#input_fields {
-  margin-bottom: 7px;
-  width: 80%;
-  div {
-    margin: 2%;
-  }
-}
-
-#addMatchButton {
-  border-radius: 3px;
-  background: $color_base;
-  border: none;
-  outline: none;
-  &:active {
-    background: $color_light;
-    outline: none;
-  }
-}
-
-#new_match_wrapper {
-  text-align: center;
-  margin: 0 auto;
-}
-
-#show_all_button {
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 25px;
-}
-
-/*LIST ELEMENT CONTENTS*/
-.list_element_container {
-  display: inline;
-}
-
-.match_img {
-  display: inline-block;
-  float: left;
-  width: 50px;
-  height: 50px;
-  background: $color_light_alt;
-  margin: 5px;
-}
-
-/*MATCH NAME*/
-.match_name {
-  display: inline-block;
-  margin-left: 10px;
-  h3 {
-    color: #333;
-    margin-top: 12px;
-    margin-bottom: 0;
-  }
-  p {
-    font-size: 14px;
-    color: #333;
-    margin: 0;
-    padding-left: 10px;
-  }
-}
-
-.match_info {
-  display: inline-block;
-  float: right;
-  width: 30%;
-}
-
-/*sr*/
-.match_sr {
-  display: inline-block;
-  text-align: right;
-  margin-top: 15px;
-  margin-right: 5%;
-  h3 {
-    display: inline;
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    font-size: 8px;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.match_outcome {
-  display: inline-block;
-  width: 40%;
-  margin-right: 10%;
-  h2{
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-    width: auto;
-  }
-}
-
-.match_delete {
-  display: inline-block;
-  float: right;
-  background-color: firebrick;
-  height: 60px;
-  width: 10%;
-}
-
-/*STAT PANEL*/
-#stat_panel {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.stat_item {
-  display: inline-block;
-  background: #3f4e68;
-  width: 33%;
-}
-
-#win_percentage {
-  text-align: center;
-  border-radius: 3px;
-  padding: 0;
-  margin: 0;
-  height: 100px;
-  padding-top: 40px;
-  p {
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-  }
-  h2 {
-    font-size: 34px;
-    color: #fff;
-    padding: 0;
-    margin: 0;
-  }
-}
 
 
 /* conditional formatting styles for list elements */
@@ -294,109 +275,103 @@ li {
 }
 
 /*MATCH HISTORY CSS*/
-#h_top_bar {
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-}
 
-#back_button {
-  display: inline-block;
-  float: left;
-  margin-top: 20px;
-  color: #fff;
-}
-
-#history_title {
-  display: inline-block;
-  h3 {
-    text-align: center;
-    color: #fff;
-  }
-}
 
 /*ADD MATCH MODAL*/
-#show_match_modal {
-  text-align: center;
-  margin: 0 auto;
-  button {
-    background: #fff;
-    width: 10%;
-    height: 25px;
-    border: none;
-    border-radius: 3px;
-  }
-}
+
 
 #add_match_modal {
-  position: absolute;
-  display: none;
-  width: 100%;
-  margin-top: 8%;
-  z-index: 10;
-}
-
-#new_match_wrapper {
-  background: #354258;
-  height: 200px;
-  width: 20%;
-  margin: 0 auto;
-  padding: 20px 40px 0 40px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #0f1218;
-}
-
-#select_map {
-  width: 80%;
-}
-
-#select_outcome {
-  width: 50%;
-  margin-right: 4%;
-}
-
-#new_match_title {
-  text-align: center;
-  color: #fff;
-  margin: 5px 5px 15px;
-}
-
-input {
-  height: 30px;
-  border-radius: 2px;
-  outline: none;
-  border: none;
-  font-size: 10px;
-  padding: 1px;
-  &[type="number"] {
-    text-align: center;
-    width: 23%;
-  }
-  &[type="date"] {
-    width: 78%;
-    margin-bottom: 15px;
-  }
-}
-
-select {
-  line-height: 30px;
-  &:invalid {
-    color: #aaa;
-  }
-}
-
-//input[type=number] {
-//  text-align: center;
-//  width: 23%;
-//}
-
-//input[type=date] {
-//  width: 78%;
-//  margin-bottom: 15px;
-//}
-
-#close_button {
-  margin-right: 4%;
+	position: absolute;
+	display: none;
+	width: 100%;
+	margin-top: 8%;
+	z-index: 10;
+	#new_match_wrapper {
+		background: #fff;
+		height: auto;
+		width: 30%;
+		margin: 0 auto;
+		border-radius: 2px;
+		box-shadow: 2px 2px 5px #0f1218;
+		#input_fields {
+			width: 80%;
+			margin: 0 auto;
+			padding: 20px 40px 20px 40px;
+			.m_input {
+				height: 50px;
+				border-style: solid;
+				border-color: #ddd;
+				border-width: 1px;
+				border-radius: 0px;
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+			#select_map {
+				width: 100%;
+				select {
+					width: 100%;
+				}
+			}
+			#select_outcome {
+				width: 60%;
+				display: inline-block;
+				select {
+					width: 90%;
+				}
+			}
+			#select_sr {
+				width: 40%;
+				display: inline-block;
+				input {
+					width: 100%;
+					padding-right: 0px;
+					text-align: center;
+				}
+			}
+			#selct_date {
+				width: 100%;
+				input {
+					text-indent: 4px;
+					min-width: 100%;
+				}
+			}
+			h3 {
+				font-size: 14px;
+				font-weight: 400;
+				color: #ccc;
+				margin: 0px;
+				padding: 0px;
+			}
+		}
+		#modal_buttons {
+			width: 100%;
+			
+			.m_button {
+				display: inline;
+				width: 50%;
+				font-size: 24px;
+				padding: 0px;
+				margin: 0px;
+				background: #f6f6f6;
+				border: none;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				outline: none;
+				
+				&:hover {
+					background: #eee;
+				}
+			}
+			#close_button {
+				color: $color_defeat;
+				border-radius: 0px 0px 0px 2px;
+			}
+			#add_match_button {
+				color: $color_victory;
+				border-radius: 0px 0px 2px 0px;
+			}
+		}
+	}
 }
 
 input[type="number"]{
@@ -420,58 +395,67 @@ input[type="number"]{
 }
 
 //************** MOBILE ***************//
-@media (max-width: $width-small) {
-  .match_delete {
-    display: none;
-  }
-  .match_info {
-    width: 40%;
-  }
-
-  .match_outcome {
-    margin-right: 17%;
-  }
-
-  li {
-    width: 98%;
-    &:hover {
-      width: 97%;
-    }
-  }
-
-  #list_wrapper {
-    width: 100%;
-  }
-
-  #base_stats {
-    width: 98%;
-  }
-
-  .stat_item {
-    width: 100%;
-  }
-  
-  #show_match_modal {
-    button {
-      width: 25%;
-    }
-  }
-  
-  #new_match_wrapper {
-    width: 50%;
-  }
-  
-  #input_fields div {
-    margin: 0px;
-  }
+@media screen and (max-width: $width-medium){
+	#wrapper {
+		#statistics {
+			display: block;
+			width: 100%;
+		}
+		#list_wrapper {
+			display: block;
+			width: 100%;
+			margin: 0px;
+		}
+	}
+	.match_info {
+		width: 40%;
+	}
+	#new_match_wrapper {
+		width: 80%;
+	}
 }
 
-@media (max-width: $width-medium) {
-  .match_info {
-    width: 40%;
-  }
-  
-  #new_match_wrapper {
-    width: 50%;
-  }
+@media screen and (max-width: $width-small) {
+	#main_info {
+		#username {
+			#username_input {
+				width: 150px;
+			}
+			h2 {
+				font-size: 24px;
+			}
+		}
+	}
+	#wrapper {
+		#list_wrapper {
+			
+			ul {
+				li {
+					height: 65px;
+					.match_name {
+							h3 {
+								font-size: 18px;
+							}
+						}
+						.match_info {
+							.match_outcome {
+								h2 {
+									font-size: 24px;
+								}
+							}
+							.match_sr {
+								h4 {
+									font-size: 14px;
+								}
+								h3 {
+									font-size: 16px;
+								}
+							}
+
+						}
+					}
+			}
+		}
+	}
 }
+

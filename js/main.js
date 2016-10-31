@@ -124,6 +124,7 @@ OverwatchStats.controller('matchListController', function matchListController($s
 		$scope.currentSR = $scope.matches[$scope.matches.length - 1].skillrating;
 	}
 	
+	$scope.gain = "+20 SR";
     $scope.maps = MAP;
     $scope.outcomes = OUTCOME;
 	$scope.username = "Novakin#1349";

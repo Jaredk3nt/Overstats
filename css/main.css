@@ -110,10 +110,12 @@ select {
         height: 75px;
         background: rgba(255, 255, 255, 0.6);
         border-radius: 4px;
-        box-shadow: 1px 1px 10px #777;
+        box-shadow: 1px 2px 10px #999;
         margin: 2% auto;
         /*LIST ELEMENT CONTENTS*/
         /*MATCH NAME*/ }
+        #wrapper #list_wrapper ul li:hover {
+          background: rgba(255, 255, 255, 0.65); }
         #wrapper #list_wrapper ul li .list_element_container {
           display: inline; }
         #wrapper #list_wrapper ul li .match_name {
@@ -170,26 +172,6 @@ select {
     margin: 0 auto;
     padding-bottom: 25px; }
 
-/*NEW MATCH*/
-#input_fields {
-  margin-bottom: 7px;
-  width: 80%; }
-  #input_fields div {
-    margin: 2%; }
-
-#addMatchButton {
-  border-radius: 3px;
-  background: #fff;
-  border: none;
-  outline: none; }
-  #addMatchButton:active {
-    background: #ddd;
-    outline: none; }
-
-#new_match_wrapper {
-  text-align: center;
-  margin: 0 auto; }
-
 /* conditional formatting styles for list elements */
 .victoryStyle {
   color: #5786d1; }
@@ -225,27 +207,33 @@ select {
   width: 100%;
   margin-top: 8%;
   z-index: 10; }
-
-#new_match_wrapper {
-  background: #354258;
-  height: 200px;
-  width: 20%;
-  margin: 0 auto;
-  padding: 20px 40px 0 40px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #0f1218; }
-
-#select_map {
-  width: 80%; }
-
-#select_outcome {
-  width: 50%;
-  margin-right: 4%; }
-
-#new_match_title {
-  text-align: center;
-  color: #fff;
-  margin: 5px 5px 15px; }
+  #add_match_modal #new_match_wrapper {
+    background: #fff;
+    height: 50%;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px #0f1218; }
+    #add_match_modal #new_match_wrapper #input_fields {
+      width: 80%;
+      margin: 0 auto; }
+    #add_match_modal #new_match_wrapper #modal_buttons {
+      width: 100%; }
+      #add_match_modal #new_match_wrapper #modal_buttons .m_button {
+        display: inline;
+        width: 50%;
+        font-size: 24px;
+        padding: 0px;
+        margin: 0px;
+        background: #ddd;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 0px 0px 2px 2px; }
+      #add_match_modal #new_match_wrapper #modal_buttons #close_button {
+        color: #e6574f; }
+      #add_match_modal #new_match_wrapper #modal_buttons #add_match_button {
+        color: #5786d1; }
 
 input {
   height: 30px;
@@ -265,9 +253,6 @@ select {
   line-height: 30px; }
   select:invalid {
     color: #aaa; }
-
-#close_button {
-  margin-right: 4%; }
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;

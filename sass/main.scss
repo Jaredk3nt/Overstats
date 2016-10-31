@@ -151,8 +151,12 @@ select {
 				height: 75px;
 				background: rgba(255, 255, 255, 0.6);
 				border-radius: 4px;
-				box-shadow: 1px 1px 10px #777;
+				box-shadow: 1px 2px 10px #999;
 				margin: 2% auto;
+				
+				&:hover {
+					background: rgba(255, 255, 255, 0.65);
+				}
 				
 				/*LIST ELEMENT CONTENTS*/
 				.list_element_container {
@@ -233,31 +237,6 @@ select {
 	}
 }
 
-/*NEW MATCH*/
-#input_fields {
-  margin-bottom: 7px;
-  width: 80%;
-  div {
-    margin: 2%;
-  }
-}
-
-#addMatchButton {
-  border-radius: 3px;
-  background: $color_base;
-  border: none;
-  outline: none;
-  &:active {
-    background: $color_light;
-    outline: none;
-  }
-}
-
-#new_match_wrapper {
-  text-align: center;
-  margin: 0 auto;
-}
-
 
 
 /* conditional formatting styles for list elements */
@@ -299,36 +278,54 @@ select {
 
 
 #add_match_modal {
-  position: absolute;
-  display: none;
-  width: 100%;
-  margin-top: 8%;
-  z-index: 10;
-}
+	position: absolute;
+	display: none;
+	width: 100%;
+	margin-top: 8%;
+	z-index: 10;
+	#new_match_wrapper {
+		background: #fff;
+		height: 50%;
+		width: 30%;
+		margin: 0 auto;
+		border-radius: 2px;
+		box-shadow: 2px 2px 5px #0f1218;
+		#input_fields {
+			width: 80%;
+			margin: 0 auto;
+			.m_input {
 
-#new_match_wrapper {
-  background: #354258;
-  height: 200px;
-  width: 20%;
-  margin: 0 auto;
-  padding: 20px 40px 0 40px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #0f1218;
-}
-
-#select_map {
-  width: 80%;
-}
-
-#select_outcome {
-  width: 50%;
-  margin-right: 4%;
-}
-
-#new_match_title {
-  text-align: center;
-  color: #fff;
-  margin: 5px 5px 15px;
+			}
+			#select_map {
+				
+			}
+			#select_outcome {
+				
+			}
+		}
+		#modal_buttons {
+			width: 100%;
+			
+			.m_button {
+				display: inline;
+				width: 50%;
+				font-size: 24px;
+				padding: 0px;
+				margin: 0px;
+				background: #ddd;
+				border: none;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				border-radius: 0px 0px 2px 2px;
+			}
+			#close_button {
+				color: $color_defeat;
+			}
+			#add_match_button {
+				color: $color_victory;
+			}
+		}
+	}
 }
 
 input {
@@ -364,10 +361,6 @@ select {
 //  width: 78%;
 //  margin-bottom: 15px;
 //}
-
-#close_button {
-  margin-right: 4%;
-}
 
 input[type="number"]{
   &::-webkit-inner-spin-button,&::-webkit-outer-spin-button {

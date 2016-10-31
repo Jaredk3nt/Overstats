@@ -21,10 +21,10 @@
 					<select class="m_input" id="select_outcome" ng-model="newOutcome" ng-options="x.name for x in outcomes" required>
 						<option value="" disabled selected hidden>Match Outcome</option>
 					</select>
-					<input class="m_input" type="number" ng-model="newSR" placeholder="Skill Rating">
+					<input class="m_input"  id="select_sr" type="number" ng-model="newSR" placeholder="Skill Rating">
 				</div>
 				<div>
-					<input class="m_input" type="date" id="date" name="input" ng-model="newDate" placeholder="yyyy-MM-dd"/>
+					<input class="m_input" type="date" id="select_date" name="input" ng-model="newDate" placeholder="yyyy-MM-dd"/>
 				</div>
 			</div>
 			<div id="modal_buttons">

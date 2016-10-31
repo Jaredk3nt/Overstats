@@ -209,7 +209,7 @@ select {
   z-index: 10; }
   #add_match_modal #new_match_wrapper {
     background: #fff;
-    height: 50%;
+    height: auto;
     width: 30%;
     margin: 0 auto;
     border-radius: 2px;
@@ -217,6 +217,17 @@ select {
     #add_match_modal #new_match_wrapper #input_fields {
       width: 80%;
       margin: 0 auto; }
+      #add_match_modal #new_match_wrapper #input_fields .m_input {
+        height: 50px;
+        border-style: solid;
+        border-color: #ddd;
+        border-width: 1px;
+        border-radius: 0px;
+        font-size: 18px; }
+      #add_match_modal #new_match_wrapper #input_fields #select_map {
+        width: 100%; }
+      #add_match_modal #new_match_wrapper #input_fields #selct_date {
+        width: 100%; }
     #add_match_modal #new_match_wrapper #modal_buttons {
       width: 100%; }
       #add_match_modal #new_match_wrapper #modal_buttons .m_button {
@@ -225,34 +236,16 @@ select {
         font-size: 24px;
         padding: 0px;
         margin: 0px;
-        background: #ddd;
+        background: #eee;
         border: none;
         padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: 0px 0px 2px 2px; }
+        padding-bottom: 10px; }
       #add_match_modal #new_match_wrapper #modal_buttons #close_button {
-        color: #e6574f; }
+        color: #e6574f;
+        border-radius: 0px 0px 0px 2px; }
       #add_match_modal #new_match_wrapper #modal_buttons #add_match_button {
-        color: #5786d1; }
-
-input {
-  height: 30px;
-  border-radius: 2px;
-  outline: none;
-  border: none;
-  font-size: 10px;
-  padding: 1px; }
-  input[type="number"] {
-    text-align: center;
-    width: 23%; }
-  input[type="date"] {
-    width: 78%;
-    margin-bottom: 15px; }
-
-select {
-  line-height: 30px; }
-  select:invalid {
-    color: #aaa; }
+        color: #5786d1;
+        border-radius: 0px 0px 2px 0px; }
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;

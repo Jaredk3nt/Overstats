@@ -44,13 +44,31 @@ select {
       background: none;
       border: none; }
 
+#history_header {
+  text-align: center; }
+  #history_header #back_button {
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    padding-left: 20px;
+    color: #fff; }
+  #history_header #history_title {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    right: -20px; }
+    #history_header #history_title h3 {
+      text-align: center;
+      color: #fff; }
+
 #main_info {
   width: 90%;
   margin: 0 auto;
   padding-top: 1%;
   padding-bottom: 1%; }
   #main_info #username {
-    display: inline; }
+    display: inline;
+    min-width: 150px; }
     #main_info #username h2 {
       font-size: 32px;
       display: inline-block;
@@ -58,7 +76,7 @@ select {
       padding: 0;
       margin-top: 5px;
       margin-bottom: 0px;
-      min-width: 50px; }
+      min-width: 150px; }
     #main_info #username input {
       display: none;
       position: absolute;
@@ -184,23 +202,6 @@ select {
   color: #e6574f; }
 
 /*MATCH HISTORY CSS*/
-#h_top_bar {
-  text-align: center;
-  width: 100%;
-  margin: 0 auto; }
-
-#back_button {
-  display: inline-block;
-  float: left;
-  margin-top: 20px;
-  color: #fff; }
-
-#history_title {
-  display: inline-block; }
-  #history_title h3 {
-    text-align: center;
-    color: #fff; }
-
 /*ADD MATCH MODAL*/
 #add_match_modal {
   position: absolute;
@@ -262,11 +263,13 @@ select {
         font-size: 24px;
         padding: 0px;
         margin: 0px;
-        background: #eee;
+        background: #f6f6f6;
         border: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         outline: none; }
+        #add_match_modal #new_match_wrapper #modal_buttons .m_button:hover {
+          background: #eee; }
       #add_match_modal #new_match_wrapper #modal_buttons #close_button {
         color: #e6574f;
         border-radius: 0px 0px 0px 2px; }
@@ -306,7 +309,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     width: 80%; } }
 @media screen and (max-width: 660px) {
   #main_info #username #username_input {
-    width: 200px; }
+    width: 150px; }
   #main_info #username h2 {
     font-size: 24px; }
 

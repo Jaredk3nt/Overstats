@@ -75,6 +75,27 @@ select {
 	}
 }
 
+#history_header {
+	text-align: center;
+	#back_button {
+		display: inline-block;
+		float: left;
+		margin-top: 20px;
+		padding-left: 20px;
+		color: #fff;
+	}
+	#history_title {
+		display: inline-block;
+		margin: 0 auto;
+		text-align: center;
+		right: -20px;
+		h3 {
+			text-align: center;
+			color: #fff;
+		}
+	}
+}
+
 #main_info {
 	width: 90%;
 	margin: 0 auto;
@@ -82,6 +103,7 @@ select {
 	padding-bottom: 1%;
 	#username {
 		display: inline;
+		min-width: 150px;
 		h2{
 			font-size: 32px;
 			display: inline-block;
@@ -89,7 +111,7 @@ select {
 			padding: 0;
 			margin-top: 5px;
 			margin-bottom: 0px;
-			min-width: 50px;
+			min-width: 150px;
 		}
 		input{
 			display: none;
@@ -253,26 +275,7 @@ select {
 }
 
 /*MATCH HISTORY CSS*/
-#h_top_bar {
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-}
 
-#back_button {
-  display: inline-block;
-  float: left;
-  margin-top: 20px;
-  color: #fff;
-}
-
-#history_title {
-  display: inline-block;
-  h3 {
-    text-align: center;
-    color: #fff;
-  }
-}
 
 /*ADD MATCH MODAL*/
 
@@ -349,12 +352,15 @@ select {
 				font-size: 24px;
 				padding: 0px;
 				margin: 0px;
-				background: #eee;
+				background: #f6f6f6;
 				border: none;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				padding-top: 15px;
+				padding-bottom: 15px;
 				outline: none;
 				
+				&:hover {
+					background: #eee;
+				}
 			}
 			#close_button {
 				color: $color_defeat;
@@ -413,7 +419,7 @@ input[type="number"]{
 	#main_info {
 		#username {
 			#username_input {
-				width: 200px;
+				width: 150px;
 			}
 			h2 {
 				font-size: 24px;

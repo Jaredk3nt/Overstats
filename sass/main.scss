@@ -1,5 +1,5 @@
 //************** SIZES ************//
-$width-small: 760px;
+$width-small: 660px;
 $width-medium: 960px;
 
 $font_base_size: 16px;
@@ -127,7 +127,6 @@ select {
 	width: 90%;
 	height: auto;
 	margin: 0 auto;
-	
 	#statistics {
 		display: inline-block;
 		width: 28%;
@@ -143,6 +142,7 @@ select {
 		width: 67%;
 		margin-left: 2%;
 		display: inline-block;
+		margin: 0 auto;
 		ul {
  			list-style: none;
 			padding: 0;
@@ -398,6 +398,7 @@ input[type="number"]{
 		#list_wrapper {
 			display: block;
 			width: 100%;
+			margin: 0px;
 		}
 	}
 	.match_info {
@@ -408,4 +409,47 @@ input[type="number"]{
 	}
 }
 
+@media screen and (max-width: $width-small) {
+	#main_info {
+		#username {
+			#username_input {
+				width: 200px;
+			}
+			h2 {
+				font-size: 24px;
+			}
+		}
+	}
+	#wrapper {
+		#list_wrapper {
+			
+			ul {
+				li {
+					height: 65px;
+					.match_name {
+							h3 {
+								font-size: 18px;
+							}
+						}
+						.match_info {
+							.match_outcome {
+								h2 {
+									font-size: 24px;
+								}
+							}
+							.match_sr {
+								h4 {
+									font-size: 14px;
+								}
+								h3 {
+									font-size: 16px;
+								}
+							}
+
+						}
+					}
+			}
+		}
+	}
+}
 

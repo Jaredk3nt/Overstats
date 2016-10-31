@@ -101,7 +101,8 @@ select {
   #wrapper #list_wrapper {
     width: 67%;
     margin-left: 2%;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0 auto; }
     #wrapper #list_wrapper ul {
       list-style: none;
       padding: 0; }
@@ -295,12 +296,29 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     width: 100%; }
   #wrapper #list_wrapper {
     display: block;
-    width: 100%; }
+    width: 100%;
+    margin: 0px; }
 
   .match_info {
     width: 40%; }
 
   #new_match_wrapper {
     width: 80%; } }
+@media screen and (max-width: 660px) {
+  #main_info #username #username_input {
+    width: 200px; }
+  #main_info #username h2 {
+    font-size: 24px; }
+
+  #wrapper #list_wrapper ul li {
+    height: 65px; }
+    #wrapper #list_wrapper ul li .match_name h3 {
+      font-size: 18px; }
+    #wrapper #list_wrapper ul li .match_info .match_outcome h2 {
+      font-size: 24px; }
+    #wrapper #list_wrapper ul li .match_info .match_sr h4 {
+      font-size: 14px; }
+    #wrapper #list_wrapper ul li .match_info .match_sr h3 {
+      font-size: 16px; } }
 
 /*# sourceMappingURL=main.css.map */

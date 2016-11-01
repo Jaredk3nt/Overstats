@@ -63,10 +63,24 @@
 	</div>
 	<div id="wrapper">
 		<div id="statistics">
-			<div class="stat_item"></div>
-			<div class="stat_item"></div>
-		</div>
-		<div id="list_wrapper">
+			<div class="stat_item">
+				<h2>Winrate by Map Type</h2>
+				<div class="map_type_winrate">
+					<h3 class="winrate_value">50%</h3><h3 class="map_type">Payload</h3>
+				</div>
+				<div class="map_type_winrate">
+					<h3 class="winrate_value">50%</h3><h3 class="map_type">Assault</h3>
+				</div>
+				<div class="map_type_winrate">
+					<h3 class="winrate_value">50%</h3><h3 class="map_type">Control Point</h3>
+				</div>
+				<div class="map_type_winrate">
+					<h3 class="winrate_value">50%</h3><h3 class="map_type">Hybrid</h3>
+				</div>
+			</div>
+			<div class="stat_item">
+			</div>
+		</div><div id="list_wrapper">
 			<ul>
 				<li ng-repeat="match in matches | orderBy:'-date':1 | limitTo:4" >
 		  			<div class="list_element_container">

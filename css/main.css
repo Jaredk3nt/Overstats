@@ -305,8 +305,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   .match_info {
     width: 40%; }
 
-  #new_match_wrapper {
-    width: 80%; } }
+  #add_match_modal #new_match_wrapper {
+    width: 50%; } }
 @media screen and (max-width: 660px) {
   #main_info #username #username_input {
     width: 150px; }
@@ -322,6 +322,9 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     #wrapper #list_wrapper ul li .match_info .match_sr h4 {
       font-size: 14px; }
     #wrapper #list_wrapper ul li .match_info .match_sr h3 {
-      font-size: 16px; } }
+      font-size: 16px; }
+
+  #add_match_modal #new_match_wrapper {
+    width: 90%; } }
 
 /*# sourceMappingURL=main.css.map */

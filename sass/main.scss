@@ -410,9 +410,12 @@ input[type="number"]{
 	.match_info {
 		width: 40%;
 	}
-	#new_match_wrapper {
-		width: 80%;
+	#add_match_modal {
+		#new_match_wrapper {
+			width: 50%;
+		}
 	}
+	
 }
 
 @media screen and (max-width: $width-small) {
@@ -455,6 +458,11 @@ input[type="number"]{
 						}
 					}
 			}
+		}
+	}
+	#add_match_modal {
+		#new_match_wrapper {
+			width: 90%;
 		}
 	}
 }

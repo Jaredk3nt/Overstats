@@ -5,15 +5,15 @@ var MAP = [
 	{value: 1, name: "King's Row", code: "Hybrid"},
 	{value: 2, name: "Hollywood", code: "Hybrid"},
 	{value: 3, name: "Numbani", code: "Hybrid"},
-	
+
 	{value: 4, name: "Ilios", code: "ControlPoint"},
 	{value: 5, name: "Lijiang Tower", code: "ControlPoint"},
 	{value: 6, name: "Nepal", code: "ControlPoint"},
-	
+
 	{value: 7, name: "Dorado", code: "Payload"},
 	{value: 8, name: "Route 66", code: "Payload"},
 	{value: 9, name: "Watchpoint: Gibraltar", code: "Payload"},
-	
+
 	{value: 10, name: "Volskaya Industries", code: "Assault"},
 	{value: 11, name: "Temple of Anubis", code: "Assault"},
 	{value: 12, name: "Hanamura", code: "Assault"}
@@ -27,11 +27,12 @@ var OUTCOME = [
 ];
 
 // Match object used to store individual match data
-function match(m, sr, o, d) {
+function match(m, sr, o, d, ch) {
     this.map = m;
     this.skillrating = sr;
 	this.outcome = o;
 	this.date = d;
+	this.gain = ch;
 }
 
 // Angular app init
@@ -41,11 +42,13 @@ var localStorageAvaliable = false;
 // TEST CODE
 var matchesList = [];
 
-
-
 window.onload = function () {
 	//localStorage.clear(); //just in case (testing purposes only)
 };
+
+function clearStorage() {
+	localStorage.clear();
+}
 
 function nameInput() {
 	document.getElementById("username_input").style.display = "block";
@@ -57,7 +60,7 @@ function showMatchModal() {
 	var overlay = document.getElementById("overlay");
 	overlay.style.display = "block";
 	modal.style.display = "block";
-	
+
 }
 
 function closeAddModal() {
@@ -100,18 +103,19 @@ function calculateWinPercentage(matches) {
             winCount++;
         }
     }
-    
+
     if (matchCount > 0) {
         var percent = (winCount / matchCount) * 100;
         return Math.round(percent * 100) / 100;
     }
-    
+
     return 0;
 }
 
 // ANGULAR LIST CONTROLLER
 OverwatchStats.controller('matchListController', function matchListController($scope) {
 	$scope.matches = [];
+	// if local-storage is avaliable then pull the match history
 	if (typeof(Storage) !== "undefined") {
 		localStorageAvaliable = true;
 		$scope.matches = loadFromStorage();
@@ -119,42 +123,48 @@ OverwatchStats.controller('matchListController', function matchListController($s
 	if ($scope.matches == null) {
 		$scope.matches = [];
 	}
+	//update current SR to be the most recent stored game played
 	$scope.currentSR = 0;
 	if($scope.matches.length > 0) {
 		$scope.currentSR = $scope.matches[$scope.matches.length - 1].skillrating;
 	}
-	
-	$scope.gain = "+20 SR";
+
     $scope.maps = MAP;
     $scope.outcomes = OUTCOME;
 	$scope.username = "Novakin#1349";
-    
+
     $scope.winPercentage = calculateWinPercentage($scope.matches);
-  
+
 	$scope.addMatch = function () {
         // check input data
         if ($scope.newMap == null || $scope.newOutcome == null || $scope.newSR == null || $scope.newSR < 0 || $scope.newSR > 5000) {
             return;
         }
-		
+
+		var netGain = $scope.newSR - $scope.currentSR;
+		var gainString = "";
+		if (netGain > 0) {
+			gainString = "+";
+		}
+		gainString += netGain + " SR";
 		// grab values from modal
-		var m = new match($scope.newMap, $scope.newSR, $scope.newOutcome, $scope.newDate);
+		var m = new match($scope.newMap, $scope.newSR, $scope.newOutcome, $scope.newDate, gainString);
 		$scope.matches.push(m);
 		addMatchLS(m);
-        
+
         $scope.winPercentage = calculateWinPercentage($scope.matches);
 		$scope.currentSR = $scope.newSR;
 		closeAddModal();
     };
-    
+
     $scope.remove = function (index) {
         var count = $scope.matches.length - 1;
         $scope.matches.splice(count - index, 1);
         $scope.winPercentage = calculateWinPercentage($scope.matches);
-        
+
         localStorage.setItem('matches', JSON.stringify($scope.matches));
     };
-	
+
 	$scope.changeName = function (keyEvent) {
 		if (keyEvent.which === 13) {
 			$scope.username = $scope.newUsername;

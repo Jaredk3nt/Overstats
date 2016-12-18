@@ -54,7 +54,7 @@
 			<h2>{{username}}</h2>
 		</div>
 		<div class="base_stat_item">
-			<h3>{{winPercentage}}%</h3>
+			<h3>{{winPercentages[4]}}%</h3>
 			<p>WINRATE</p>
 		</div>
 		<div class="base_stat_item">
@@ -67,16 +67,16 @@
 			<div class="stat_item">
 				<h2>Winrate by Map Type</h2>
 				<div class="map_type_winrate">
-					<h3 class="winrate_value">50%</h3><h3 class="map_type">Payload</h3>
+					<h3 class="winrate_value">{{winPercentages[0]}}% </h3><h3 class="map_type">Hybrid</h3>
 				</div>
 				<div class="map_type_winrate">
-					<h3 class="winrate_value">50%</h3><h3 class="map_type">Assault</h3>
+					<h3 class="winrate_value">{{winPercentages[1]}}% </h3><h3 class="map_type">Control Point</h3>
 				</div>
 				<div class="map_type_winrate">
-					<h3 class="winrate_value">50%</h3><h3 class="map_type">Control Point</h3>
+					<h3 class="winrate_value">{{winPercentages[2]}}% </h3><h3 class="map_type">Payload</h3>
 				</div>
 				<div class="map_type_winrate">
-					<h3 class="winrate_value">50%</h3><h3 class="map_type">Hybrid</h3>
+					<h3 class="winrate_value">{{winPercentages[3]}}% </h3><h3 class="map_type">Assault</h3>
 				</div>
 			</div>
 			<div class="stat_item">
@@ -87,7 +87,7 @@
 		  			<div class="list_element_container">
 						<div class="match_name">
 							<h3>{{match.map.name}}</h3>
-							<p>{{match.map.code}} Map</p>
+							<p>{{match.map.code.name}} Map</p>
 						</div>
 						<div class="match_info">
 							<div class="match_outcome" ng-class="{victoryStyle: match.outcome.value == 1, drawStyle: match.outcome.value == 2, defeatStyle: match.outcome.value == 0}"><h2>{{match.outcome.name}}</h2></div>

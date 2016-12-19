@@ -57,7 +57,7 @@ select {
 			font-weight: 300;
   		}
 	}
-	
+
 	#show_match_modal {
 		display: inline;
 		float: right;
@@ -209,11 +209,11 @@ select {
 				border-radius: 4px;
 				box-shadow: 1px 2px 10px #999;
 				margin: 0 auto 2% auto;
-				
+
 				&:hover {
 					background: rgba(255, 255, 255, 0.65);
 				}
-				
+
 				/*LIST ELEMENT CONTENTS*/
 				.list_element_container {
 					display: inline;
@@ -379,7 +379,7 @@ select {
 		}
 		#modal_buttons {
 			width: 100%;
-			
+
 			.m_button {
 				display: inline;
 				width: 50%;
@@ -391,7 +391,7 @@ select {
 				padding-top: 15px;
 				padding-bottom: 15px;
 				outline: none;
-				
+
 				&:hover {
 					background: #eee;
 				}
@@ -449,7 +449,7 @@ input[type="number"]{
 			width: 50%;
 		}
 	}
-	
+
 }
 
 @media screen and (max-width: $width-small) {
@@ -465,19 +465,25 @@ input[type="number"]{
 	}
 	#wrapper {
 		#list_wrapper {
-			
+
 			ul {
 				li {
 					height: 65px;
 					.match_name {
+						max-width: 42%;
+
 							h3 {
 								font-size: 18px;
+								overflow: hidden;
+								white-space: nowrap;
+								text-overflow: ellipsis;
 							}
 						}
 						.match_info {
+							width: 50%;
 							.match_outcome {
 								h2 {
-									font-size: 24px;
+									font-size: 20px;
 								}
 							}
 							.match_sr {
@@ -500,4 +506,3 @@ input[type="number"]{
 		}
 	}
 }
-

@@ -166,18 +166,25 @@ OverwatchStats.controller('matchListController', function matchListController($s
 
 		var netGain = $scope.newSR - $scope.currentSR;
 		var gainString = "";
-		if (netGain > 0) {
+		if (netGain >= 0) {
 			gainString = "+";
 		}
-		gainString += netGain + " SR";
+		gainString += netGain;
+		if ($scope.currentSR === 0) {
+			gainString = " ";
+		}
 		// grab values from modal
 		var m = new match($scope.newMap, $scope.newSR, $scope.newOutcome, $scope.newDate, gainString);
 		$scope.matches.push(m);
 		addMatchLS(m);
 
-        $scope.winPercentage = calculateWinPercentage($scope.matches);
+
 		$scope.currentSR = $scope.newSR;
 		closeAddModal();
+		$scope.winPercentages = calculateWinPercentage($scope.matches);
+		// $scope.$apply( function() {
+		//
+		// });
     };
 
     $scope.remove = function (index) {

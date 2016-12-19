@@ -219,6 +219,12 @@ select {
     text-align: center;
     margin: 0 auto;
     padding-bottom: 25px; }
+  #wrapper .empty_message h3 {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 1em; }
 
 /* conditional formatting styles for list elements */
 .victoryStyle {
@@ -323,6 +329,29 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   display: none; }
 
 @media screen and (max-width: 960px) {
+  #wrapper #list_wrapper ul li .match_name {
+    max-width: 45%; }
+    #wrapper #list_wrapper ul li .match_name h3 {
+      font-size: 26px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+  #wrapper #list_wrapper ul li .match_info {
+    width: 50%; }
+    #wrapper #list_wrapper ul li .match_info .match_outcome h2 {
+      font-size: 30px; }
+
+  .match_info {
+    width: 40%; }
+
+  #add_match_modal #new_match_wrapper {
+    width: 50%; } }
+@media screen and (max-width: 760px) {
+  #main_info #username #username_input {
+    width: 150px; }
+  #main_info #username h2 {
+    font-size: 24px; }
+
   #wrapper #statistics {
     display: block;
     width: 100%; }
@@ -330,28 +359,26 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     display: block;
     width: 100%;
     margin: 0px; }
-
-  .match_info {
-    width: 40%; }
-
-  #add_match_modal #new_match_wrapper {
-    width: 50%; } }
-@media screen and (max-width: 660px) {
-  #main_info #username #username_input {
-    width: 150px; }
-  #main_info #username h2 {
-    font-size: 24px; }
-
-  #wrapper #list_wrapper ul li {
-    height: 65px; }
-    #wrapper #list_wrapper ul li .match_name h3 {
-      font-size: 18px; }
-    #wrapper #list_wrapper ul li .match_info .match_outcome h2 {
-      font-size: 24px; }
-    #wrapper #list_wrapper ul li .match_info .match_sr h4 {
-      font-size: 14px; }
-    #wrapper #list_wrapper ul li .match_info .match_sr h3 {
-      font-size: 16px; }
+    #wrapper #list_wrapper ul h3 {
+      color: #fff;
+      text-align: center; }
+    #wrapper #list_wrapper ul li {
+      height: 65px; }
+      #wrapper #list_wrapper ul li .match_name {
+        max-width: 42%; }
+        #wrapper #list_wrapper ul li .match_name h3 {
+          font-size: 18px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+      #wrapper #list_wrapper ul li .match_info {
+        width: 50%; }
+        #wrapper #list_wrapper ul li .match_info .match_outcome h2 {
+          font-size: 20px; }
+        #wrapper #list_wrapper ul li .match_info .match_sr h4 {
+          font-size: 14px; }
+        #wrapper #list_wrapper ul li .match_info .match_sr h3 {
+          font-size: 16px; }
 
   #add_match_modal #new_match_wrapper {
     width: 90%; } }

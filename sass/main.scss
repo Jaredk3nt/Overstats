@@ -1,5 +1,5 @@
 //************** SIZES ************//
-$width-small: 660px;
+$width-small: 760px;
 $width-medium: 960px;
 
 $font_base_size: 16px;
@@ -57,7 +57,7 @@ select {
 			font-weight: 300;
   		}
 	}
-	
+
 	#show_match_modal {
 		display: inline;
 		float: right;
@@ -209,11 +209,11 @@ select {
 				border-radius: 4px;
 				box-shadow: 1px 2px 10px #999;
 				margin: 0 auto 2% auto;
-				
+
 				&:hover {
 					background: rgba(255, 255, 255, 0.65);
 				}
-				
+
 				/*LIST ELEMENT CONTENTS*/
 				.list_element_container {
 					display: inline;
@@ -291,6 +291,16 @@ select {
 		margin: 0 auto;
 		padding-bottom: 25px;
 	}
+	.empty_message{
+		h3 {
+			color: #fff;
+			text-align: center;
+			font-weight: 300;
+			font-size: 2rem;
+			padding: 1em;
+		}
+	}
+
 }
 
 
@@ -379,7 +389,7 @@ select {
 		}
 		#modal_buttons {
 			width: 100%;
-			
+
 			.m_button {
 				display: inline;
 				width: 50%;
@@ -391,7 +401,7 @@ select {
 				padding-top: 15px;
 				padding-bottom: 15px;
 				outline: none;
-				
+
 				&:hover {
 					background: #eee;
 				}
@@ -432,13 +442,30 @@ input[type="number"]{
 @media screen and (max-width: $width-medium){
 	#wrapper {
 		#statistics {
-			display: block;
-			width: 100%;
+
 		}
 		#list_wrapper {
-			display: block;
-			width: 100%;
-			margin: 0px;
+			ul {
+				li {
+					.match_name {
+						max-width: 45%;
+						h3 {
+							font-size: 26px;
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+						}
+					}
+					.match_info {
+						width: 50%;
+						.match_outcome {
+							h2 {
+								font-size: 30px;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	.match_info {
@@ -449,7 +476,7 @@ input[type="number"]{
 			width: 50%;
 		}
 	}
-	
+
 }
 
 @media screen and (max-width: $width-small) {
@@ -464,20 +491,37 @@ input[type="number"]{
 		}
 	}
 	#wrapper {
+		#statistics {
+			display: block;
+			width: 100%;
+		}
 		#list_wrapper {
-			
+			display: block;
+			width: 100%;
+			margin: 0px;
 			ul {
+				h3 {
+					color: #fff;
+					text-align: center;
+				}
+
 				li {
 					height: 65px;
 					.match_name {
+						max-width: 42%;
+
 							h3 {
 								font-size: 18px;
+								overflow: hidden;
+								white-space: nowrap;
+								text-overflow: ellipsis;
 							}
 						}
 						.match_info {
+							width: 50%;
 							.match_outcome {
 								h2 {
-									font-size: 24px;
+									font-size: 20px;
 								}
 							}
 							.match_sr {
@@ -500,4 +544,3 @@ input[type="number"]{
 		}
 	}
 }
-

@@ -4,8 +4,11 @@ A project to create a self-tracking statistics website for competitive Overwatch
 
 *We are currently using Angularjs 1.X and SASS in our project.*
 
-![](https://github.com/Jaredk3nt/Overstats/currentBuild.png)
+![](https://github.com/Jaredk3nt/Overstats/blob/master/currentBuild.png)
+> This is what our current build looks like 
 
+As you can see we still have some ways to go, but the foundation is there. We are working on tapping into the data more and will be adding graphs and insights.
+  
 We would love your help in making our project come to life, but please follow the contribution guide lines.
 
 #### Contribution Guidelines
